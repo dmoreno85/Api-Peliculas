@@ -1,25 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
 header {
   justify-content: space-between;
   align-items: center;
   display: flex;
 
-  .logo {
-    background: red;
-  }
+  .divIzquierdo {
+    justify-content: center;
+    align-items: center;
+    display: flex;
 
-  .menuPrincipal {
-    background: red;
-
-    .listaMenuPrincipal {
+    .logo {
+      background: red;
+      padding: 10px;
+      height: 75px;
+      justify-content: center;
+      align-items: center;
       display: flex;
-      list-style: none;
 
-      .itemMenu {
+      p {
+        font-family: 'Lobster', sans-serif;
+        text-shadow: 0 3px 0 #454545;
+        background: green;
+        font-size: 2.5em;
         padding: 5px;
+        text-align: center;
+        transition: 0.4s;
 
-        .divSubmenu {
-            display: none;
+        &:hover {
+          margin-top: 5px;
+          text-shadow: none;
+          transition: 0.2s;
+        }
+      }
+    }
+
+    .menuPrincipal {
+      background: red;
+      margin-left: 15px;
+
+      .listaMenuPrincipal {
+        display: flex;
+        list-style: none;
+
+        .itemMenu {
+          font-size: 1.3em;
+          padding: 5px;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          position: relative;
+
+          p {
+            font-size: 1.3em;
           }
+
+          .divSubmenu {
+            display: none;
+            position: absolute;
+            background: red;
+            padding-top: 10px;
+            top: 40px;
+            left: 5px;
+            padding: 5px;
+            width: 200px;
+            font-size: 1.2em;
+
+            .submenuList {
+              list-style: none;
+
+              li {
+                padding: 5px;
+                transition: 0.5s;
+
+                &:hover {
+                  background: blueviolet;
+                  transition: 0.5s;
+                }
+              }
+            }
+          }
+        }
+
+        .btnPeliculas {
+          padding: 5px;
+
+          &:hover .submenuPelis {
+            display: block;
+          }
+        }
+
+        .btnSeries {
+          padding: 5px;
+
+          &:hover .submenuSeries {
+            display: block;
+          }
+        }
       }
     }
   }
