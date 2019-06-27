@@ -1,0 +1,30 @@
+.search {
+  padding: 5px;
+  background: red;
+
+  .divSearch {
+    display: flex;
+
+    .divIcon {
+
+      background: blue;
+      padding: 5px;
+
+      .icon {
+        font-size: 1.3em;
+      }
+    }
+
+    .divInput {
+      background: green;
+
+      input {
+        outline: none;
+        height: 100%;
+        border: none;
+        padding: 5px;
+        font-size: 1em;
+      }
+    }
+  }
+}
