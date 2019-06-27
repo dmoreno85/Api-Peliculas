@@ -9,6 +9,9 @@ import { ContentPrincipalComponent } from './Components/content-principal/conten
 import { IndexComponent } from './Views/index/index.component';
 import { SearchComponent } from './Components/search/search.component';
 import { ContentSecundarioComponent } from './Components/content-secundario/content-secundario.component';
+import { ResultsComponent } from './Views/results/results.component';
+import { SeriesComponent } from './Views/series/series.component';
+import { PelisComponent } from './Views/pelis/pelis.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { ContentSecundarioComponent } from './Components/content-secundario/cont
     IndexComponent,
     SearchComponent,
     ContentSecundarioComponent,
+    ResultsComponent,
+    SeriesComponent,
+    PelisComponent,
   ],
   imports: [
     BrowserModule,
