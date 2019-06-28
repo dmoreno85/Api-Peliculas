@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-content-principal',
@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./content-principal.component.scss']
 })
 export class ContentPrincipalComponent {
-
-
 }
