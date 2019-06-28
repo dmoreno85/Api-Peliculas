@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule } from '@angular/router'
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
@@ -36,6 +37,7 @@ import { SerieInfoComponent } from './Views/serie-info/serie-info.component';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
