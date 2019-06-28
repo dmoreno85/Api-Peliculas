@@ -11,12 +11,14 @@ $Color4: #eeeeee;
   .formFooter {
 
     display: flex;
+    justify-content: space-between;
 
-    .search {
+
+    .searchFooter {
       justify-content: center;
       display: flex;
       align-items: center;
-      height: 100%;
+    
 
 
     }
@@ -105,14 +107,27 @@ $Color4: #eeeeee;
       }
     }
 
-    .inputDiv {
-      width: 50%;
+    .formDiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      // width: 50%;
+      // display: flex;
+      // justify-content: center;
+      // flex-direction: column;
+      // padding: 13px;
+      // color: $Color4;
+      // padding-right: 91px;
+        .inputDiv{
+          // width: 50%;
       display: flex;
       justify-content: center;
       flex-direction: column;
       padding: 13px;
       color: $Color4;
       padding-right: 91px;
+        }
 
       button {
         background: $Color1;
