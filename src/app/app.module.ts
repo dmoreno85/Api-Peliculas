@@ -12,6 +12,8 @@ import { ContentSecundarioComponent } from './Components/content-secundario/cont
 import { ResultsComponent } from './Views/results/results.component';
 import { SeriesComponent } from './Views/series/series.component';
 import { PelisComponent } from './Views/pelis/pelis.component';
+import { PeliComponent } from './Views/peli/peli.component';
+import { SerieComponent } from './Views/serie/serie.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { PelisComponent } from './Views/pelis/pelis.component';
     ResultsComponent,
     SeriesComponent,
     PelisComponent,
+    PeliComponent,
+    SerieComponent,
   ],
   imports: [
     BrowserModule,
