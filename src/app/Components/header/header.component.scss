@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 
+$Color1: #323643;
+$Color2: #606470;
+$Color3: #f1c40f;
+$Color4: #eeeeee;
+
 header {
+  // position: sticky;
+  // top: 0;
   justify-content: space-between;
   align-items: center;
   display: flex;
+  background: $Color1;
 
   .divIzquierdo {
     justify-content: center;
@@ -11,21 +19,31 @@ header {
     display: flex;
 
     .logo {
-      background: red;
-      padding: 10px;
+      padding: 5px 10px 10px 10px;
       height: 75px;
       justify-content: center;
       align-items: center;
       display: flex;
 
-      p {
-        font-family: 'Lobster', sans-serif;
-        text-shadow: 0 3px 0 #454545;
-        background: green;
-        font-size: 2.5em;
-        padding: 5px;
-        text-align: center;
-        transition: 0.4s;
+      a {
+        display: flex;
+        text-shadow: 0 3px 5px $Color2;
+        transition: 0.5s;
+        justify-content: center;
+        align-items: center;
+
+        .img-logo {
+          width: 32px;
+          height: 50px;
+        }
+
+        p {
+          font-family: 'Lobster', sans-serif;
+          font-size: 2.5em;
+          color: $Color3;
+          padding: 5px;
+          text-align: center;
+        }
 
         &:hover {
           margin-top: 5px;
@@ -36,7 +54,6 @@ header {
     }
 
     .menuPrincipal {
-      background: red;
       margin-left: 15px;
 
       .listaMenuPrincipal {
@@ -46,35 +63,43 @@ header {
         .itemMenu {
           font-size: 1.3em;
           padding: 5px;
+          margin: auto 10px;
           justify-content: center;
           align-items: center;
           display: flex;
           position: relative;
 
           p {
-            font-size: 1.3em;
+            font-size: 1.2em;
+            color: $Color4;
+            transition: 0.5s;
+
+            &:hover {
+              color: $Color3;
+              transition: 0.2s;
+            }
           }
 
           .divSubmenu {
             display: none;
             position: absolute;
-            background: red;
-            padding-top: 10px;
+            background: $Color1;
             top: 40px;
             left: 5px;
             padding: 5px;
             width: 200px;
-            font-size: 1.2em;
-
+            
             .submenuList {
+              padding-top: 10px;
               list-style: none;
 
               li {
+                color: $Color4;
                 padding: 5px;
                 transition: 0.5s;
 
                 &:hover {
-                  background: blueviolet;
+                  color: $Color3;
                   transition: 0.5s;
                 }
               }

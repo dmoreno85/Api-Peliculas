@@ -1,24 +1,43 @@
+$Color1: #323643;
+$Color2: #606470;
+$Color3: #f1c40f;
+$Color4: #eeeeee;
+
 .search {
   padding: 5px;
-  background: red;
 
   .divSearch {
     display: flex;
 
-    .divIcon {
+    &:hover {
 
-      background: blue;
+      .divIcon .icon {
+        transition: 0.3s;
+        color: $Color3;
+      }
+
+      .divInput input {
+        border-bottom: 2px solid $Color3;
+        transition: 0.3s;
+      }
+    }
+
+    .divIcon {
       padding: 5px;
 
       .icon {
+        transition: 0.5s;
+        color: $Color4;
         font-size: 1.5em;
       }
     }
 
     .divInput {
-      background: green;
+      transition: 0.5s;
 
       input {
+        color: $Color4;
+        background: $Color1;
         outline: none;
         height: 100%;
         border: none;

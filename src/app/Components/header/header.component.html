@@ -3,29 +3,34 @@
   <div class="divIzquierdo">
     <!-- Logo -->
     <div class="logo">
-      <p>Peli.pepito</p>
+      <a [routerLink]="['/']">
+        <img src="https://www.svgrepo.com/show/120041/popcorn.svg" alt="logo" class="img-logo">
+        <p>Peli.pepito</p>
+      </a>
     </div>
 
     <!-- Menu principa; -->
     <div class="menuPrincipal">
       <ul class="listaMenuPrincipal">
         <li class="itemMenu btnPeliculas">
-          <p class="">Películas</p>
+            <a [routerLink]="['/pelis']"><p>Películas</p></a>
           <div class="divSubmenu submenuPelis">
             <!-- Submenu -->
             <ul class="submenuList">
-              <li class="itemSubmenu">Novedades p</li>
-              <li class="itemSubmenu">Más vistas p</li>
+              <li class="itemSubmenu">Populares</li>
+              <li class="itemSubmenu">Novedades</li>
+              <li class="itemSubmenu">Mejor puntuadas</li>
+              <!-- <li class="itemSubmenu">En cines</li> -->
             </ul>
           </div>
         </li>
         <li class="itemMenu btnSeries">
-          <p class="btnSeries">Series</p>
+            <a [routerLink]="['/series']"><p>Series</p></a>
           <div class="divSubmenu submenuSeries">
             <!-- Submenu -->
             <ul class="submenuList">
-              <li class="itemSubmenu">Novedades s</li>
-              <li class="itemSubmenu">Más vistas s</li>
+                <li class="itemSubmenu">Populares</li>
+                <li class="itemSubmenu">Novedades</li>
             </ul>
           </div>
         </li>
