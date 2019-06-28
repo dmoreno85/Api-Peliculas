@@ -1,8 +1,12 @@
 .componentPrincipal{
-    width: 73vw;
     display: flex;
-    margin:2em 0;
-}
-.div1, .div2{
-    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2em 0;
+    div{
+        img{
+            width: 350px;
+            height: 300px;
+        }
+    }
 }
