@@ -12,8 +12,8 @@ import { ContentSecundarioComponent } from './Components/content-secundario/cont
 import { ResultsComponent } from './Views/results/results.component';
 import { SeriesComponent } from './Views/series/series.component';
 import { PelisComponent } from './Views/pelis/pelis.component';
-import { PeliComponent } from './Views/peli/peli.component';
-import { SerieComponent } from './Views/serie/serie.component';
+import { PeliInfoComponent } from './Views/peli-info/peli-info.component';
+import { SerieInfoComponent } from './Views/serie-info/serie-info.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +27,8 @@ import { SerieComponent } from './Views/serie/serie.component';
     ResultsComponent,
     SeriesComponent,
     PelisComponent,
-    PeliComponent,
-    SerieComponent,
+    PeliInfoComponent,
+    SerieInfoComponent,
   ],
   imports: [
     BrowserModule,

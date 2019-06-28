@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PeliComponent } from './peli.component';
+import { SerieInfoComponent } from './serie-info.component';
 
-describe('PeliComponent', () => {
-  let component: PeliComponent;
-  let fixture: ComponentFixture<PeliComponent>;
+describe('SerieInfoComponent', () => {
+  let component: SerieInfoComponent;
+  let fixture: ComponentFixture<SerieInfoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PeliComponent ]
+      declarations: [ SerieInfoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PeliComponent);
+    fixture = TestBed.createComponent(SerieInfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
