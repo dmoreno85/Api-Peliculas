@@ -14,6 +14,7 @@ import { SeriesComponent } from './Views/series/series.component';
 import { PelisComponent } from './Views/pelis/pelis.component';
 import { PeliInfoComponent } from './Views/peli-info/peli-info.component';
 import { SerieInfoComponent } from './Views/serie-info/serie-info.component';
+import { FilmsResultsComponent } from './Components/films-results/films-results.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SerieInfoComponent } from './Views/serie-info/serie-info.component';
     PelisComponent,
     PeliInfoComponent,
     SerieInfoComponent,
+    FilmsResultsComponent,
   ],
   imports: [
     BrowserModule,
