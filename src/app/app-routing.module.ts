@@ -9,7 +9,7 @@ import { SeriesComponent } from './Views/series/series.component';
 const routes: Routes = [
   { path: "", component: IndexComponent },
   { path: "results", component: ResultsComponent },
-  { path: "pelis", component: PelisComponent},
+  { path: "pelis", component: PelisComponent },
   { path: "series", component: SeriesComponent },
 ];
 
