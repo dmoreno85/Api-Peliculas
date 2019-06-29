@@ -6,12 +6,13 @@ $Color3: #f1c40f;
 $Color4: #eeeeee;
 
 header {
-  // position: sticky;
-  // top: 0;
+  position: sticky;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   display: flex;
   background: $Color1;
+  z-index: 1000;
 
   .divIzquierdo {
     justify-content: center;
