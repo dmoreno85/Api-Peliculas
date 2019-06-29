@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 import { RouterModule } from '@angular/router'
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http'
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
@@ -36,6 +39,7 @@ import { FilmsResultsComponent } from './Components/films-results/films-results.
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
