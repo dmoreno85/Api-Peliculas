@@ -1,20 +1,11 @@
 <div class="componentPrincipal">
-  <div>
-    <div>
-      <a><img src="https://picsum.photos/960/480" alt="" title="" /></a>
-    </div>
-    <div>
-      <a><img src="https://picsum.photos/960/480" alt="" title="" /></a>
-      <a><img src="https://picsum.photos/960/480" alt="" title="" /></a>
-    </div>
-  </div>
-  <div>
-    <div>
-      <a><img src="https://picsum.photos/960/480" alt="" title="" /></a>
-    </div>
-    <div>
-      <a><img src="https://picsum.photos/960/480" alt="" title="" /></a>
-      <a><img src="https://picsum.photos/960/480" alt="" title="" /></a>
-    </div>
+  <div class="div1" *ngFor="let movie of peliculas">
+    <h2>{{movie.title}}</h2>
+    <a>
+      <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}" title="{{movie.title}}" />
+    </a>
   </div>
 </div>
+
+
+<!-- https://api.themoviedb.org/3/movie/550?api_key=57100bbbe8d760beada498e98fb84066 -->
