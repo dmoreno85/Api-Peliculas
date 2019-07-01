@@ -1,28 +1,33 @@
 <footer class="footer">
 
   <div class="formFooter">
-    <div class="inputDiv">
-        <input class="inputs" type="text" placeholder="Nombre">
-        <input class="inputs" type="text" placeholder="Email">
-        <textarea class="inputs" name="" id="" cols="20" rows="6" placeholder="Escribe una descripción.."></textarea>
-        <button type="submit">Enviar</button>
+    <div class="formDiv">
+      <div class="inputDiv">
+      <input class="inputs" type="text" placeholder=" Nombre">
+      <input class="inputs" type="text" placeholder=" Email">
+      <textarea class="inputs" name="" id="" cols="20" rows="6" placeholder=" Escribe un comentario.."></textarea>
     </div>
+      <button type="submit">Enviar</button>
+    </div>
+    <app-search class="searchFooter"></app-search>
     <div class="autorDiv">
-        <div class="icons">
-           <a href="http://facebook.com" target="_blank"> <i class="fab fa-facebook-f fa-2x face redSocial"></i></a>
-           <a href="http://twitter.com" target="_blank"> <i class="fab fa-twitter fa-2x twit redSocial"></i></a>
-            <a href="http://whatsapp.com" target="_blank"> <i class="fab fa-whatsapp fa-2x what redSocial"></i></a>
-              <a href="http://youtube.com" target="_blank">  <i class="fab fa-youtube fa-2x you redSocial"></i></a>
+      
+        <app-redes-sociales></app-redes-sociales>
+      
+      <div class="autor">
+        <div class="iconDatos">
+           <i class="fas fa-mobile-alt Icon"></i>
+          <p>Cont: 687 79 54 12</p>
         </div>
-        <div class="autor">
-          <i class="fas fa-mobile-alt redSocial">Cont:687 79 54 12</i>
-          <a href="http://gmail.com" target="_blank">  <i class="far fa-envelope redSocial">Email:peli@pepito.com</i></a>
-       
-    </div>
+        <a href="http://gmail.com" target="_blank" class="iconDatos"> <i class="far fa-envelope Icon"> </i>
+          <p>Email: peli@pepito.com</p>
+        </a>
+
+      </div>
     </div>
   </div>
   <div class="copyRight">
-    Todos los dererechos reservados ©
+    <p>Todos los dererechos reservados ©</p>
 
   </div>
 </footer>
