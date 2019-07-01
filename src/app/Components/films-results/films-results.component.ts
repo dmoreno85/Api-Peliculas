@@ -27,7 +27,7 @@ export class FilmsResultsComponent implements OnInit {
 
   nextPage() {
     if (this.page < this.totalPages) {
-      this.page++;
+      this.page+=1;
       this.peliculasService.getTodasPeliculas(this.page, this.languaje).subscribe(value => {
         this.peliculasPopulares = value.results;
       }, error => console.log('No se han podido recuperar los datos'))
@@ -37,7 +37,7 @@ export class FilmsResultsComponent implements OnInit {
 
   previousPage() {
     if (this.page > 1) {
-      this.page--;
+      this.page-=1;
       this.peliculasService.getTodasPeliculas(this.page, this.languaje).subscribe(value => {
         this.peliculasPopulares = value.results;
       }, error => console.log('No se han podido recuperar los datos'));
