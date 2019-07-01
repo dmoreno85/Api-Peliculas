@@ -15,6 +15,10 @@ export class SeriesService {
 
   getTodasSeries(page:Number, language:String):Observable<any>{
     //Conseguimos las peliculas mas populares
-    return this.http.get('https://api.themoviedb.org/3/tv/popular?api_key=57100bbbe8d760beada498e98fb84066&language=${language}&page=${page}');
+    return this.http.get(`https://api.themoviedb.org/3/tv/popular?api_key=57100bbbe8d760beada498e98fb84066&language=${language}&page=${page}`);
+  };
+
+   getInfoSerie(id:String, language:String):Observable<Object>{
+    return  this.http.get(`https://api.themoviedb.org/3/tv/${id}?api_key=57100bbbe8d760beada498e98fb84066&language=${language}`);
   };
 }

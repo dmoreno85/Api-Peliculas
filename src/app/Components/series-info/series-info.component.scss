@@ -1,0 +1,15 @@
+.serieInfo {
+  background: yellowgreen;
+  width: 100wh;
+  height: 70vh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  .box {
+    background: white;
+    border: solid 1px black;
+    width: 200px;
+    height: 400px;
+  }
+}

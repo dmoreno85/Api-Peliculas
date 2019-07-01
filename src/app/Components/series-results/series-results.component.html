@@ -1,24 +1,26 @@
 <div id="divAllFilms">
-    <!-- <div class="filtros"></div> -->
-    <div class="films">
-      <div class="individualFilm" *ngFor="let movie of seriesPopulares">
+  <!-- <div class="filtros"></div> -->
+  <div class="films">
+
+    <div class="individualFilm" *ngFor="let movie of seriesPopulares">
+      <a [routerLink]="['/series-info', movie.id]">
         <div class="posterFilm">
-          <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
+          <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.name}}">
         </div>
         <div class="infoFilm">
           <div class="title">
-            <h2>{{movie.title}}</h2>
+            <h2>{{movie.name}}</h2>
           </div>
         </div>
-      </div>
-    </div>
-  
-    <div class="paginacion">
-      <div class="atras">
-        <p class="arrow" (click)="previousPage()">◀️</p>
-        <p>{{page}} de {{totalPages}}</p>
-        <p class="arrow" (click)="nextPage()">▶️</p>
-      </div>
+      </a>
     </div>
   </div>
-  
+
+  <div class="paginacion">
+    <div class="atras">
+      <p class="arrow" (click)="previousPage()">◀️</p>
+      <p>{{page}} de {{totalPages}}</p>
+      <p class="arrow" (click)="nextPage()">▶️</p>
+    </div>
+  </div>
+</div>

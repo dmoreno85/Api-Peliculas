@@ -20,6 +20,7 @@ import { SerieInfoComponent } from './Views/serie-info/serie-info.component';
 import { RedesSocialesComponent } from './Components/redes-sociales/redes-sociales.component';
 import { FilmsResultsComponent } from './Components/films-results/films-results.component';
 import { SeriesResultsComponent } from './Components/series-results/series-results.component';
+import { SeriesInfoComponent } from './Components/series-info/series-info.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { SeriesResultsComponent } from './Components/series-results/series-resul
     RedesSocialesComponent,
     FilmsResultsComponent,
     SeriesResultsComponent,
+    SeriesInfoComponent,
     
   ],
   imports: [
