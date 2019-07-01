@@ -6,23 +6,20 @@ $Color4: #eeeeee;
 .componentPrincipal{
     margin: 2em 0;
     .images{
-        // display: flex;
-        // flex-wrap: wrap;
-        // justify-content: center;
-        // box-shadow:0 0 20px 0 $Color2;
-        width: max-content;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     div{
         img{
             width: 350px;
             height: 300px;
-            
         }
-        &:hover{
-            width: 360px;
-            height: 310px;
-            transition: 1s;
-        }
+        // &:hover{
+        //     width: 360px;
+        //     height: 310px;
+        //     transition: 1s;
+        // }
         
     }
 }

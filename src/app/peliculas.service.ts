@@ -17,6 +17,10 @@ export class PeliculasService {//generamos el servicio con ng g service [nombre 
     //Conseguimos las peliculas mas populares
     return this.http.get(`http://api.themoviedb.org/3/movie/popular?api_key=57100bbbe8d760beada498e98fb84066&language=${language}&page=${page}`);
   };
+
+  getPeliInfo(id):Observable<any>{
+    return this.http.get(`https://api.themoviedb.org/3/movie/${id}?api_key=57100bbbe8d760beada498e98fb84066`);
+   }
   
 }
 
