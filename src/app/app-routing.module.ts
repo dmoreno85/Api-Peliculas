@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: "", component: IndexComponent },
   { path: "results", component: ResultsComponent },
   { path: "pelis/:type", component: PelisComponent },
-  { path: "series", component: SeriesComponent },
+  { path: "series/:type", component: SeriesComponent },
   { path: "redesSociales", component: RedesSocialesComponent }
 ];
 

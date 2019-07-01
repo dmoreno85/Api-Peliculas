@@ -99,9 +99,13 @@ header {
                 padding: 5px;
                 transition: 0.5s;
 
-                &:hover {
+                &:hover a {
                   color: $Color3;
                   transition: 0.5s;
+                }
+
+                a {
+                  color: $Color4;
                 }
               }
             }

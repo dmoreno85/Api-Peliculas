@@ -18,7 +18,7 @@ export class PeliculasService {//generamos el servicio con ng g service [nombre 
     switch (type) {
       case 'all':
         return this.http.get(`https://api.themoviedb.org/3/discover/movie?api_key=57100bbbe8d760beada498e98fb84066&language=${language}&page=${page}`);
-      case 'popular':
+      case 'populares':
         return this.http.get(`http://api.themoviedb.org/3/movie/popular?api_key=57100bbbe8d760beada498e98fb84066&language=${language}&page=${page}`);
       case 'novedades':
         return this.http.get(`http://api.themoviedb.org/3/movie/upcoming?api_key=57100bbbe8d760beada498e98fb84066&language=${language}&page=${page}`);

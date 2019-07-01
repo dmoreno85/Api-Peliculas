@@ -13,26 +13,38 @@
     <div class="menuPrincipal">
       <ul class="listaMenuPrincipal">
         <li class="itemMenu btnPeliculas">
-            <a [routerLink]="['/pelis','all']"><p>Películas</p></a>
+          <a [routerLink]="['/pelis','all']">
+            <p>Películas</p>
+          </a>
           <div class="divSubmenu submenuPelis">
             <!-- Submenu -->
             <ul class="submenuList">
               <li class="itemSubmenu">
                 <a [routerLink]="['/pelis', 'populares']">Populares</a>
               </li>
-              <li class="itemSubmenu">Novedades</li>
-              <li class="itemSubmenu">Mejor puntuadas</li>
+              <li class="itemSubmenu">
+                <a [routerLink]="['/pelis', 'novedades']">Novedades</a>
+              </li>
+              <li class="itemSubmenu">
+                <a [routerLink]="['/pelis', 'mejor-puntuadas']">Mejor puntuadas</a>
+              </li>
               <!-- <li class="itemSubmenu">En cines</li> -->
             </ul>
           </div>
         </li>
         <li class="itemMenu btnSeries">
-            <a [routerLink]="['/series']"><p>Series</p></a>
+          <a [routerLink]="['/series', 'all']">
+            <p>Series</p>
+          </a>
           <div class="divSubmenu submenuSeries">
             <!-- Submenu -->
             <ul class="submenuList">
-                <li class="itemSubmenu">Populares</li>
-                <li class="itemSubmenu">Novedades</li>
+              <li class="itemSubmenu">
+                <a [routerLink]="['/series', 'populares']">Populares</a>
+              </li>
+              <li class="itemSubmenu">
+                <a [routerLink]="['/series', 'novedades']">Novedades</a>
+              </li>
             </ul>
           </div>
         </li>
