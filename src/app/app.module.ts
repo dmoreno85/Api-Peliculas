@@ -19,6 +19,8 @@ import { PeliInfoComponent } from './Views/peli-info/peli-info.component';
 import { SerieInfoComponent } from './Views/serie-info/serie-info.component';
 import { RedesSocialesComponent } from './Components/redes-sociales/redes-sociales.component';
 import { FilmsResultsComponent } from './Components/films-results/films-results.component';
+import { SeriesResultsComponent } from './Components/series-results/series-results.component';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { FilmsResultsComponent } from './Components/films-results/films-results.
     SerieInfoComponent,
     RedesSocialesComponent,
     FilmsResultsComponent,
+    SeriesResultsComponent,
+    
   ],
   imports: [
     BrowserModule,

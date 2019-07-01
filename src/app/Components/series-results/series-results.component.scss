@@ -1,0 +1,100 @@
+$Color1: #323643;
+$Color2: #606470;
+$Color3: #f1c40f;
+$Color4: #eeeeee;
+
+#divAllFilms {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+
+  .films {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+
+    .individualFilm {
+      border: 1px solid $Color2;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 360px;
+      margin: 10px;
+      justify-content: center;
+      align-items: stretch;
+      display: flex;
+      flex-direction: column;
+      transition: 0.5s;
+
+      &:hover {
+        box-shadow:0 0 20px 0 $Color2;
+        transition: 0.5s;
+      }
+
+      &:hover .posterFilm img {
+          filter: grayscale(0%);
+          transition: 0.5s;
+      }
+
+      .posterFilm {
+        background: green;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        img {
+            filter: grayscale(50%);
+          width: 360px;
+          height: 500px;
+          transition: 0.5s;
+        }
+      }
+
+      .infoFilm {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          width: 100%;
+
+          h2 {
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            display: inline-block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-bottom: -4px;
+          }
+        }
+      }
+    }
+  }
+
+  .paginacion {
+
+    .atras {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        height: 100%;
+        padding: 10px;
+        margin: 5px;
+        font-size: 1.2em;
+      }
+
+      .arrow {
+        font-size: 1.5em;
+      }
+    }
+
+  }
+}
