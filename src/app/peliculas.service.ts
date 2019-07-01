@@ -10,13 +10,17 @@ export class PeliculasService {//generamos el servicio con ng g service [nombre 
   constructor(private http: HttpClient) { } // aquí inyectamos el httpClient como dependencia del servicio PeliculasService
 
   getEstrenosPeliculas():Observable<any>{
-    return this.http.get('https://api.themoviedb.org/3/movie/upcoming?api_key=57100bbbe8d760beada498e98fb84066&language=en-US&page=1');
+    return this.http.get('https://api.themoviedb.org/3/movie/upcoming?api_key=57100bbbe8d760beada498e98fb84066');
   };
 
   getTodasPeliculas(page:Number, language:String):Observable<any>{
     //Conseguimos las peliculas mas populares
     return this.http.get(`http://api.themoviedb.org/3/movie/popular?api_key=57100bbbe8d760beada498e98fb84066&language=${language}&page=${page}`);
   };
+
+  getPeliInfo(id):Observable<any>{
+    return this.http.get(`https://api.themoviedb.org/3/movie/${id}?api_key=57100bbbe8d760beada498e98fb84066`);
+   }
   
 }
 

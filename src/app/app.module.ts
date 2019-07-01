@@ -15,7 +15,8 @@ import { ContentSecundarioComponent } from './Components/content-secundario/cont
 import { ResultsComponent } from './Views/results/results.component';
 import { SeriesComponent } from './Views/series/series.component';
 import { PelisComponent } from './Views/pelis/pelis.component';
-import { PeliInfoComponent } from './Views/peli-info/peli-info.component';
+import { PeliInfoViewComponent } from './Views/peli-info/peli-info.component';
+import { PeliInfoComponent } from './Components/peli-info/peli-info.component';
 import { SerieInfoComponent } from './Views/serie-info/serie-info.component';
 import { RedesSocialesComponent } from './Components/redes-sociales/redes-sociales.component';
 import { FilmsResultsComponent } from './Components/films-results/films-results.component';
@@ -36,6 +37,7 @@ import { SeriesInfoComponent } from './Components/series-info/series-info.compon
     SeriesComponent,
     PelisComponent,
     PeliInfoComponent,
+    PeliInfoViewComponent,
     SerieInfoComponent,
     RedesSocialesComponent,
     FilmsResultsComponent,
