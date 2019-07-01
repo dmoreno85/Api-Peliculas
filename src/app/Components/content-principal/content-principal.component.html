@@ -1,8 +1,10 @@
 <div class="componentPrincipal">
-  <div *ngFor="let movie of peliculas">
-    <a>
-      <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}" title="{{movie.title}}" />
-    </a>
+  <div class="images">
+    <div *ngFor="let movie of peliculas">
+      <a [routerLink]="['/pelis']">
+        <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}" title="{{movie.title}}" />
+      </a>
+    </div>
   </div>
 </div>
 

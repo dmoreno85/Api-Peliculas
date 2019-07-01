@@ -1,12 +1,28 @@
+$Color1: #323643;
+$Color2: #606470;
+$Color3: #f1c40f;
+$Color4: #eeeeee;
+
 .componentPrincipal{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     margin: 2em 0;
+    .images{
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: center;
+        // box-shadow:0 0 20px 0 $Color2;
+        width: max-content;
+    }
     div{
         img{
             width: 350px;
             height: 300px;
+            
         }
+        &:hover{
+            width: 360px;
+            height: 310px;
+            transition: 1s;
+        }
+        
     }
 }
