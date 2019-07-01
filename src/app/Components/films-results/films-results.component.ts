@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PeliculasService } from '../../peliculas.service';
 
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { switchMap } from 'rxjs/operators';
 
@@ -24,13 +24,15 @@ export class FilmsResultsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.resultType = this.route.snapshot.paramMap.get('type');
+    this.route.params.subscribe(value => {
+      this.resultType = value.type;
 
-    this.peliculasService.getTodasPeliculas(this.page, this.languaje, this.resultType).subscribe(value => {
-      console.log(value);
-      this.page = value.page;
-      this.totalPages = value.total_pages;
-      this.peliculasPopulares = value.results;
+      this.peliculasService.getTodasPeliculas(this.page, this.languaje, this.resultType).subscribe(value => {
+        console.log(value);
+        this.page = value.page;
+        this.totalPages = value.total_pages;
+        this.peliculasPopulares = value.results;
+      }, error => console.log(error));
     }, error => console.log(error));
   }
 
