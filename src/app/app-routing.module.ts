@@ -10,7 +10,7 @@ import { RedesSocialesComponent } from './Components/redes-sociales/redes-social
 const routes: Routes = [
   { path: "", component: IndexComponent },
   { path: "results", component: ResultsComponent },
-  { path: "pelis", component: PelisComponent },
+  { path: "pelis/:type", component: PelisComponent },
   { path: "series", component: SeriesComponent },
   { path: "redesSociales", component: RedesSocialesComponent }
 ];

@@ -22,14 +22,16 @@
   </div>
   <div class="films">
     <div class="individualFilm" *ngFor="let movie of peliculasPopulares">
-      <div class="posterFilm">
-        <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
-      </div>
-      <div class="infoFilm">
-        <div class="title">
-          <h2>{{movie.title}}</h2>
+      <a [routerLink]="['/pelis-info', movie.id]">
+        <div class="posterFilm">
+          <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
         </div>
-      </div>
+        <div class="infoFilm">
+          <div class="title">
+            <h2>{{movie.title}}</h2>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 
