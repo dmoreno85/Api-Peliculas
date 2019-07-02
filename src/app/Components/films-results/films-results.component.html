@@ -1,15 +1,37 @@
 <div id="divAllFilms">
-  <!-- <div class="filtros"></div> -->
+  <div class="filtros">
+    <div class="filtroNombreAscendente filtro">
+      <i class="fNombreA fas fa-font"></i>
+      <p class="fNombreA">⬆️</p>
+    </div>
+    <div class="filtroNombreDesscendente filtro">
+      <i class="fNombreD fas fa-font"></i>
+      <p class="fNombreD">⬇️</p>
+    </div>
+    <div class="filtroCalendarAscendente filtro">
+      <i class="fCalendarA far fa-calendar-alt"></i>
+      <p class="fCalendarA">⬆️</p>
+    </div>
+    <div class="filtroCalendarDescendente selected filtro">
+      <i class="fCalendarD far fa-calendar-alt"></i>
+      <p class="fCalendarD">⬇️</p>
+    </div>
+    <div class="filtroValoraciones filtro">
+      <i class="fValoraciones fas fa-star"></i>
+    </div>
+  </div>
   <div class="films">
     <div class="individualFilm" *ngFor="let movie of peliculasPopulares">
-      <div class="posterFilm">
-        <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
-      </div>
-      <div class="infoFilm">
-        <div class="title">
-          <h2>{{movie.title}}</h2>
+      <a [routerLink]="['/pelis-info', movie.id]">
+        <div class="posterFilm">
+          <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
         </div>
-      </div>
+        <div class="infoFilm">
+          <div class="title">
+            <h2>{{movie.title}}</h2>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 
