@@ -4,21 +4,13 @@ $Color3: #f1c40f;
 $Color4: #eeeeee;
 
 .componentPrincipal{
-    margin: 4em 0;
-    .images{
-        margin: 0px 59px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        box-shadow: 0 0 20px 0 $Color2;
-    }
-    img{
-        width: 330px;
+    margin: 50px 141px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0 0 20px 5px $Color2;
+    background-color: transparent;
+    a, img{
         height: 400px;
-        &:hover{
-                width: 360px;
-                height: 310px;
-                transition: 1s;
-        } 
     }
 }
