@@ -1,13 +1,50 @@
 
 
+div .top{
+    margin: 5em;
+    display: flex;
+
+}
+
+ h2 {
+    all:unset;
+    align-self: center;
+    font-family: 'BioRhyme', serif;
+    font-size: 1.5em;
+}
+
+.dropdown{
+    align-self: center;
+}
+
 .Component{
     display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 2.5em;
+    
 }
 
 .ficha {
-    border: 0.3em dotted;
-    width: 20% ;
-    height: 30em;
+    border-left: 0.5em dashed;
+    border-inline-end-style: 0.5em dotted black;
+    border-right: 0.5em dashed;
+    width: 18em ;
+    height: 95%;
     box-shadow: goldenrod;
+    padding: 2.5em;
+    margin:1em;
+    box-shadow: 10px 10px 5px 0px rgba(138, 146, 28, 0.75);
+    align-items: center;
+    
+    img {
+        width: 98% ;
+        height: 95%;
+    }
 
+    h3 {
+        max-width: 98% ;
+        height: 2em;
+    }
+    
 }
