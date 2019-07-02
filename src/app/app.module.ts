@@ -23,7 +23,6 @@ import { FilmsResultsComponent } from './Components/films-results/films-results.
 import { SeriesResultsComponent } from './Components/series-results/series-results.component';
 import { SeriesInfoComponent } from './Components/series-info/series-info.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +42,6 @@ import { SeriesInfoComponent } from './Components/series-info/series-info.compon
     FilmsResultsComponent,
     SeriesResultsComponent,
     SeriesInfoComponent,
-    
   ],
   imports: [
     BrowserModule,
