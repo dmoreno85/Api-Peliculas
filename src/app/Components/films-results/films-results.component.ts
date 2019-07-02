@@ -18,12 +18,15 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
   private totalPages: number;
   private languaje: string = "en-US";
 
+  private genres: string[];
+
   constructor(
     private peliculasService: PeliculasService,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
+    this.getGenres();
     this.route.params.subscribe(value => {
       this.resultType = value.type;
 
@@ -158,6 +161,12 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
         });
       }
     }
+  }
+
+  getGenres() {
+    let allGenres = this.peliculasService.getAllGenres().subscribe(value => {
+      this.genres = value.genres;
+    }, error => console.log(error));
   }
 
 }

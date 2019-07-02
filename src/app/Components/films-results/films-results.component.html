@@ -5,34 +5,41 @@
   </div>
 
   <div class="filtros">
-    <div class="fName">
-      <div class="filtroNombreAscendente filtro" (click)="byName('nameAscendant')">
-        <i class="fNombreA fas fa-font"></i>
-        <p class="fNombreA">⬆️</p>
-      </div>
-      <div class="filtroNombreDesscendente filtro" (click)="byName('nameDescendant')">
-        <i class="fNombreD fas fa-font"></i>
-        <p class="fNombreD">⬇️</p>
-      </div>
+    <div class="temas">
+      <select name="tema">
+        <option *ngFor="let genre of genres" value="{{genre.name}}">{{genre.name}}</option>
+      </select>
     </div>
-    <div class="fDate">
-      <div class="filtroCalendarAscendent filtro" (click)="byTime('dateAscendant')">
-        <i class="fCalendarA far fa-calendar-alt"></i>
-        <p class="fCalendarA">⬆️</p>
+    <div class="orden">
+      <div class="fName">
+        <div class="filtroNombreAscendente filtro" (click)="byName('nameAscendant')">
+          <i class="fNombreA fas fa-font"></i>
+          <p class="fNombreA">⬆️</p>
+        </div>
+        <div class="filtroNombreDesscendente filtro" (click)="byName('nameDescendant')">
+          <i class="fNombreD fas fa-font"></i>
+          <p class="fNombreD">⬇️</p>
+        </div>
       </div>
-      <div class="filtroCalendarDescendente filtro" (click)="byTime('dateDescendant')">
-        <i class="fCalendarD far fa-calendar-alt"></i>
-        <p class="fCalendarD">⬇️</p>
+      <div class="fDate">
+        <div class="filtroCalendarAscendent filtro" (click)="byTime('dateAscendant')">
+          <i class="fCalendarA far fa-calendar-alt"></i>
+          <p class="fCalendarA">⬆️</p>
+        </div>
+        <div class="filtroCalendarDescendente filtro" (click)="byTime('dateDescendant')">
+          <i class="fCalendarD far fa-calendar-alt"></i>
+          <p class="fCalendarD">⬇️</p>
+        </div>
       </div>
-    </div>
-    <div class="fPopular">
-      <div class="filtroValoraciones filtro" (click)="byPopulation('popularityAscendant')">
-        <i class="fValoraciones fas fa-star"></i>
-        <p class="fPopularA">⬆️</p>
-      </div>
-      <div class="filtroValoraciones filtro" (click)="byPopulation('popularityDescendant')">
-        <i class="fValoraciones fas fa-star"></i>
-        <p class="fPopularD">⬇️</p>
+      <div class="fPopular">
+        <div class="filtroValoraciones filtro" (click)="byPopulation('popularityAscendant')">
+          <i class="fValoraciones fas fa-star"></i>
+          <p class="fPopularA">⬆️</p>
+        </div>
+        <div class="filtroValoraciones filtro" (click)="byPopulation('popularityDescendant')">
+          <i class="fValoraciones fas fa-star"></i>
+          <p class="fPopularD">⬇️</p>
+        </div>
       </div>
     </div>
   </div>
