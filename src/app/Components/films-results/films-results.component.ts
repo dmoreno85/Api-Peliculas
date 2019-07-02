@@ -91,25 +91,25 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
 
 
 
-  byName(order: String) {
+  byName(order: string) {
     this.orderBy = order;
     if (this.peliculas) {
       if (order === 'nameAscendant') {
         this.peliculas.sort(function (a, b) {
-          if (a.title > b.title) {
+          if (a['title'] > b['title']) {
             return 1;
           }
-          if (a.title < b.title) {
+          if (a['title'] < b['title']) {
             return -1;
           }
           return 0;
         });
       } else {
         this.peliculas.sort(function (a, b) {
-          if (a.title < b.title) {
+          if (a['title'] < b['title']) {
             return 1;
           }
-          if (a.title > b.title) {
+          if (a['title'] > b['title']) {
             return -1;
           }
           return 0;
@@ -118,43 +118,55 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
     }
   }
 
-  byTime(order: String) {
+  byTime(order: string) {
     this.orderBy = order;
     console.log(this.orderBy);
     if (this.peliculas) {
       if (order === 'dateAscendant') {
-        this.peliculas.sort(function (a, b) {
-          return new Date(a.release_date) - new Date(b.release_date);
+        this.peliculas.sort((a:Object, b:Object) => {
+          if (a['release_date'] < b['release_date']) {
+            return 1;
+          }
+          if (a['release_date'] > b['release_date']) {
+            return -1;
+          }
+          return 0;
         });
       } else {
-        this.peliculas.sort(function (a, b) {
-          return new Date(b.release_date) - new Date(a.release_date);
+        this.peliculas.sort((a:Object, b:Object) => {
+          if (a['release_date'] > b['release_date']) {
+            return 1;
+          }
+          if (a['release_date'] < b['release_date']) {
+            return -1;
+          }
+          return 0;
         });
       }
     }
   }
 
-  byPopulation(order: String) {
+  byPopulation(order: string) {
     this.orderBy = order;
     console.log(this.orderBy);
     if (this.peliculas) {
       if (this.orderBy === 'popularityAscendant') {
 
         this.peliculas.sort(function (a, b) {
-          if (a.popularity < b.popularity) {
+          if (a['popularity'] < b['popularity']) {
             return 1;
           }
-          if (a.popularity > b.popularity) {
+          if (a['popularity'] > b['popularity']) {
             return -1;
           }
           return 0;
         });
       } else {
         this.peliculas.sort(function (a, b) {
-          if (a.popularity > b.popularity) {
+          if (a['popularity'] > b['popularity']) {
             return 1;
           }
-          if (a.popularity < b.popularity) {
+          if (a['popularity'] < b['popularity']) {
             return -1;
           }
           return 0;
@@ -165,7 +177,7 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
 
   getGenres() {
     let allGenres = this.peliculasService.getAllGenres().subscribe(value => {
-      this.genres = value.genres;
+      this.genres = value['genres'];
     }, error => console.log(error));
   }
 
