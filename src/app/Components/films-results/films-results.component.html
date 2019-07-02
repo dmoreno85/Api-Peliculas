@@ -1,27 +1,44 @@
 <div id="divAllFilms">
+
+  <div class="pageTitle">
+    <h2>{{pageTitle}}</h2>
+  </div>
+
   <div class="filtros">
-    <div class="filtroNombreAscendente filtro">
-      <i class="fNombreA fas fa-font"></i>
-      <p class="fNombreA">⬆️</p>
+    <div class="fName">
+      <div class="filtroNombreAscendente filtro" (click)="byName('nameAscendant')">
+        <i class="fNombreA fas fa-font"></i>
+        <p class="fNombreA">⬆️</p>
+      </div>
+      <div class="filtroNombreDesscendente filtro" (click)="byName('nameDescendant')">
+        <i class="fNombreD fas fa-font"></i>
+        <p class="fNombreD">⬇️</p>
+      </div>
     </div>
-    <div class="filtroNombreDesscendente filtro">
-      <i class="fNombreD fas fa-font"></i>
-      <p class="fNombreD">⬇️</p>
+    <div class="fDate">
+      <div class="filtroCalendarAscendent filtro" (click)="byTime('dateAscendant')">
+        <i class="fCalendarA far fa-calendar-alt"></i>
+        <p class="fCalendarA">⬆️</p>
+      </div>
+      <div class="filtroCalendarDescendente filtro" (click)="byTime('dateDescendant')">
+        <i class="fCalendarD far fa-calendar-alt"></i>
+        <p class="fCalendarD">⬇️</p>
+      </div>
     </div>
-    <div class="filtroCalendarAscendente filtro">
-      <i class="fCalendarA far fa-calendar-alt"></i>
-      <p class="fCalendarA">⬆️</p>
-    </div>
-    <div class="filtroCalendarDescendente selected filtro">
-      <i class="fCalendarD far fa-calendar-alt"></i>
-      <p class="fCalendarD">⬇️</p>
-    </div>
-    <div class="filtroValoraciones filtro">
-      <i class="fValoraciones fas fa-star"></i>
+    <div class="fPopular">
+      <div class="filtroValoraciones filtro" (click)="byPopulation('popularityAscendant')">
+        <i class="fValoraciones fas fa-star"></i>
+        <p class="fPopularA">⬆️</p>
+      </div>
+      <div class="filtroValoraciones filtro" (click)="byPopulation('popularityDescendant')">
+        <i class="fValoraciones fas fa-star"></i>
+        <p class="fPopularD">⬇️</p>
+      </div>
     </div>
   </div>
+
   <div class="films">
-    <div class="individualFilm" *ngFor="let movie of peliculasPopulares">
+    <div class="individualFilm" *ngFor="let movie of peliculas">
       <a [routerLink]="['/pelis-info', movie.id]">
         <div class="posterFilm">
           <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
