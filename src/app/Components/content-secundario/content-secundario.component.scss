@@ -3,6 +3,7 @@
 div .top{
     margin: 5em;
     display: flex;
+    background: transparent;
 
 }
 
@@ -13,9 +14,6 @@ div .top{
     font-size: 1.5em;
 }
 
-.dropdown{
-    align-self: center;
-}
 
 .Component{
     display:flex;
@@ -36,7 +34,22 @@ div .top{
     margin:1em;
     box-shadow: 10px 10px 5px 0px rgba(138, 146, 28, 0.75);
     align-items: center;
-    
+}
+    .form-select-button{
+        all: unset;
+        padding: 1em;
+        color: #323643;
+        background-color: #f1c40f;
+        border: 1px #6c757d solid;
+        box-shadow: 10px 10px 5px 0px rgba(138, 146, 28, 0.75);
+        border-radius: 3px 3px 3px 3px;
+        left: 5em;
+              &:hover {
+               color: #fff;
+               background-color: #6c757d;
+               border-color: #545b62;
+                  }
+           }
     img {
         width: 98% ;
         height: 95%;
@@ -47,4 +60,4 @@ div .top{
         height: 2em;
     }
     
-}
+

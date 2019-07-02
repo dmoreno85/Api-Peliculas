@@ -1,15 +1,16 @@
 <div class="top">
     <h2>Top 5 Peliculas</h2>
   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Mejores 5 Peliculas
+    <button class="form-select-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Mejores 5 Peliculas de 
     </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" value='2019'>
       <a class="dropdown-item" (click)="filtrarPorMejores(2019)">2019</a>
       <a class="dropdown-item" (click)="filtrarPorMejores(2018)">2018</a>
       <a class="dropdown-item" (click)="filtrarPorMejores(2017)">2017</a>
-      <a class="dropdown-item" (click)="filtrarPorMejoresIntervalo(2009, 2019)">Última Decada</a>
-      <a class="dropdown-item" (click)="filtrarPorMejoresIntervalo(0,2019)">De La Historia</a>  
+      <a class="dropdown-item" (click)="filtrarPorMejoresIntervalo(2009, 2019)">la Decada</a>
+      <a class="dropdown-item" (click)="filtrarPorMejoresIntervalo(0,2019)"> la Historia</a>  
+      
     </div>
   </div>
 </div>
