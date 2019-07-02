@@ -12,17 +12,11 @@ import { PeliInfoViewComponent } from './Views/peli-info/peli-info.component';
 const routes: Routes = [
   { path: "", component: IndexComponent },
   { path: "results", component: ResultsComponent },
-<<<<<<< HEAD
-  { path: "pelis", component: PelisComponent },
-  { path: "series", component: SeriesComponent },
-  { path: "series-info/:id", component: SerieInfoComponent },
-  { path: "peli-info/:id", component: PeliInfoViewComponent },
-=======
   { path: "pelis/:type", component: PelisComponent },
   { path: "pelis-info/:id", component: PeliInfoViewComponent },
   { path: "series/:type", component: SeriesComponent },
->>>>>>> master
-  { path: "redesSociales", component: RedesSocialesComponent }
+  { path: "redesSociales", component: RedesSocialesComponent },
+  { path: "series-info/:id", component: SerieInfoComponent },
 ];
 
 @NgModule({
