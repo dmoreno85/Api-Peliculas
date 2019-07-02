@@ -91,7 +91,7 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
 
 
 
-  byName(order: String) {
+  byName(order: string) {
     this.orderBy = order;
     if (this.peliculas) {
       if (order === 'nameAscendant') {
@@ -118,7 +118,7 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
     }
   }
 
-  byTime(order: String) {
+  byTime(order: string) {
     this.orderBy = order;
     console.log(this.orderBy);
     if (this.peliculas) {
@@ -134,7 +134,7 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
     }
   }
 
-  byPopulation(order: String) {
+  byPopulation(order: string) {
     this.orderBy = order;
     console.log(this.orderBy);
     if (this.peliculas) {
