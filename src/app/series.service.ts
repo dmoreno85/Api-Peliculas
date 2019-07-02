@@ -9,16 +9,24 @@ import { Observable } from 'rxjs' //importo el Observable para tipar el método 
 export class SeriesService {
   constructor(private http: HttpClient) { } // aquí inyectamos el httpClient como dependencia del servicio PeliculasService
 
-  getEstrenosSeries():Observable<any>{
+  getEstrenosSeries(): Observable<any> {
     return this.http.get('https://api.themoviedb.org/3/tv/latest?api_key=57100bbbe8d760beada498e98fb84066&language=${language}&page=${page}');
   };
 
-  getTodasSeries(page:Number, language:String):Observable<any>{
+  getTodasSeries(page: Number, language: String, type: String): Observable<any> {
     //Conseguimos las peliculas mas populares
-    return this.http.get(`https://api.themoviedb.org/3/tv/popular?api_key=57100bbbe8d760beada498e98fb84066&language=${language}&page=${page}`);
+    switch (type) {
+      case "all":
+        return this.http.get(`https://api.themoviedb.org/3/discover/tv?api_key=57100bbbe8d760beada498e98fb84066&language=${language}&page=${page}`);
+      case "populares":
+        return this.http.get(`https://api.themoviedb.org/3/tv/popular?api_key=57100bbbe8d760beada498e98fb84066&language=${language}&page=${page}`);
+      case "mejor-puntuadas":
+        return this.http.get(`https://api.themoviedb.org/3/tv/top_rated?api_key=57100bbbe8d760beada498e98fb84066&language=${language}&page=${page}`);
+
+    }
   };
 
-   getInfoSerie(id:String, language:String):Observable<Object>{
-    return  this.http.get(`https://api.themoviedb.org/3/tv/${id}?api_key=57100bbbe8d760beada498e98fb84066&language=${language}`);
+  getInfoSerie(id: String, language: String): Observable<Object> {
+    return this.http.get(`https://api.themoviedb.org/3/tv/${id}?api_key=57100bbbe8d760beada498e98fb84066&language=${language}`);
   };
 }
