@@ -18,6 +18,8 @@ export class ContentSecundarioComponent implements OnInit {
     this.peliculasService.getPeliculasByYear(year).subscribe(res => this.peliculas=res.results.splice(0,5), error=>console.log(error))
   }
   filtrarPorMejoresIntervalo(desde:number,hasta:number):void{
-
+    console.log(this.year)
+    this.peliculasService.getPeliculasByYear(this.year).subscribe(res => this.peliculas=res.results.splice(0,5), error=>console.log(error))
+ 
   }
 }
