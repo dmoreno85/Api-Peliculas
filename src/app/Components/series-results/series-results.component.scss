@@ -7,6 +7,7 @@ $Color4: #eeeeee;
   justify-content: center;
   align-items: center;
   display: flex;
+  transition: 0.5s;
   flex-direction: column;
   padding: 50px;
 
@@ -207,5 +208,6 @@ $Color4: #eeeeee;
 @media (max-width: 750px){
   #divAllFilms{
     padding: 0;
+    transition: 0.5s;
   }
 }
