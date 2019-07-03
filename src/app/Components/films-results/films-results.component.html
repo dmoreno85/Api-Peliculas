@@ -1,4 +1,7 @@
-<div id="divAllFilms">
+<div class="spinner" *ngIf="!peliculas">
+    <img src="../../../assets//images/spinner.gif" alt="spinner">
+  </div>
+<div id="divAllFilms" *ngIf="peliculas" >
 
   <div class="pageTitle">
     <h2>{{pageTitle}}</h2>

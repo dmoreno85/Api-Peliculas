@@ -1,7 +1,5 @@
 
-<!-- --------Peliculas-------- -->
-
-<div class="top">
+<div class="top" *ngIf="principalLoaded">
     <h2>Top 5 Peliculas</h2>
   <div class="dropdown">
     <button class="form-select-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -19,7 +17,7 @@
 </div>
 
 
-<div class="Component">
+<div class="Component" *ngIf="principalLoaded">
   <div class="ficha" *ngFor="let movie of peliculas">
     <div class="primera" event=show.bs.dropdown>
       <h3>{{movie.title}}</h3>
