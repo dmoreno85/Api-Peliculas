@@ -6,7 +6,7 @@ import { Observable } from 'rxjs' //importo el Observable para tipar el método 
   providedIn: 'root' //aquí inyectamos el servicio en la aplicacion
 })
 export class PeliculasService {//generamos el servicio con ng g service [nombre del servicio]
-
+  principalLoaded:boolean=false;
   constructor(private http: HttpClient) { } // aquí inyectamos el httpClient como dependencia del servicio PeliculasService
 
   getEstrenosPeliculas(): Observable<any> {

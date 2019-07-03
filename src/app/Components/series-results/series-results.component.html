@@ -1,4 +1,8 @@
-<div id="divAllFilms">
+<div class="spinner" *ngIf="!seriesPopulares">
+    <img src="../../../assets//images/spinner.gif" alt="spinner">
+  </div>
+
+<div id="divAllFilms" *ngIf="seriesPopulares">
   <!-- <div class="filtros"></div> -->
   <div class="films">
 

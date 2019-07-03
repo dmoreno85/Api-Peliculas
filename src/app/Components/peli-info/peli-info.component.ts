@@ -18,7 +18,7 @@ export class PeliInfoComponent implements OnInit {
   constructor(private peliculasService: PeliculasService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.params.subscribe(params => { //me suscribo a los parámetros de la ruta, en este caso el ID
+    this.route.params.subscribe(params => {    //me suscribo a los parámetros de la ruta, en este caso el ID
 
       this.peliculasService.getPeliInfo(params.id).subscribe(res => {//llamo al servicio pasándole la id de la ruta
 
