@@ -1,8 +1,8 @@
-<div class="spinner" *ngIf="!seriesPopulares">
+<div class="spinner" *ngIf="!series">
   <img src="../../../assets//images/spinner.gif" alt="spinner">
 </div>
 
-<div id="divAllFilms" *ngIf="seriesPopulares">
+<div id="divAllFilms" *ngIf="series">
   <div class="content">
     <div class="pageTitle">
       <h2>{{pageTitle}}</h2>
@@ -53,24 +53,13 @@
     </div>
 
     <div class="films">
-      <div class="individualFilm" *ngFor="let movie of seriesPopulares">
+      <div class="individualFilm" *ngFor="let movie of series">
         <a [routerLink]="['/series-info', movie.id]">
           <div class="posterFilm">
             <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.name}}">
-
-            <div class="films">
-
-              <div class="individualFilm" *ngFor="let movie of series">
-                <a [routerLink]="['/series-info', movie.id]">
-                  <div class="posterFilm">
-                    <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.name}}">
-                  </div>
-                  <div class="infoFilm">
-                    <div class="title">
-                      <h2>{{movie.name}}</h2>
-                    </div>
-                  </div>
-                </a>
+            <div class="infoFilm">
+              <div class="title">
+                <h2>{{movie.name}}</h2>
               </div>
             </div>
           </div>
