@@ -3,48 +3,27 @@ $Color2: #606470;
 $Color3: #f1c40f;
 $Color4: #eeeeee;
 
-.serieInfo {
-  display:flex;
-  padding:50px;
-  img{
-    border: 1px solid $Color2;
-    border-radius: 10px;
-  }
-  .infoSerie{
-    padding: 50px;
-    .title{
-        font-size: x-large;
-        padding-bottom: 20px;
-    }
-  }
+.serieInfo{
   .backBox{
     position: relative;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    img{
-      width: 100vw;
-    }
-    .box {
-      top:0;
-      bottom: 0;
-      margin: auto;
-      position: absolute;
-      background: white;
-      border: solid 1px black;
-      width: 80px;
-      height: 60px;
-      background-size: cover;
-      img {
-        width: 80px;
-        height: 60px;
-        background-size: cover;
+    .box{
+      display:flex;
+      padding:50px;
+      img{
+        border: 1px solid $Color2;
+        border-radius: 10px;
       }
-    }
+      .infoSerie{
+        padding: 50px;
+        .title{
+            font-size: x-large;
+            padding-bottom: 20px;
+        }
+      }
+    }  
   }
 }
+

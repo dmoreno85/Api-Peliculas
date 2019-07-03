@@ -1,17 +1,19 @@
 <div class="serieInfo" *ngIf="serieInfo">
   <div class="backBox" *ngIf="palette" [ngStyle]="styleContainer()">
     <div class="box">
-      <img src="https://image.tmdb.org/t/p/w780/{{serieInfo?.poster_path}}" alt="{{serieInfo?.name}}" title="{{serieInfo?.name}}">
-    </div>
-    <div class="infoSerie">
-      <div class="title">
-          <h2>{{serieInfo?.title}}</h2>
+      <div>
+        <img src="https://image.tmdb.org/t/p/w500/{{serieInfo?.poster_path}}" alt="{{serieInfo?.name}}" title="{{serieInfo?.name}}">
       </div>
-      <div class="resumenSerie">
+      <div class="infoSerie">
+        <div class="title">
+          <h2>{{serieInfo?.name}}</h2>
+        </div>
+        <div class="resumenSerie">
           <div>
-              <h3>{{serieInfo?.overview}}</h3>
+            <h3>{{serieInfo?.overview}}</h3>
           </div>
+        </div>
       </div>
-  </div>
+    </div>
   </div>
 </div>

@@ -32,7 +32,7 @@ export class SeriesInfoComponent implements OnInit {
     this.seriesService.getInfoSerie(this.id, this.language).subscribe(value => {
       this.serieInfo = value;
       console.log(this.serieInfo)
-      let img = `https://image.tmdb.org/t/p/w780/${this.serieInfo.backdrop_path}`
+      let img = `https://image.tmdb.org/t/p/w500/${this.serieInfo.backdrop_path}`
       Vibrant.from(img).getPalette((err, palette) => {
         console.log(palette)
         console.log(err)
