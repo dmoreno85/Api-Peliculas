@@ -30,8 +30,7 @@ $Color4: #eeeeee;
     }
 }
 html{
-    
-    background-image:url(./assets/images/popcorn.png);
+    background-image: url("./assets/images/popcorn.png");//linear-gradient(transparent, $Color4 95%),
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
