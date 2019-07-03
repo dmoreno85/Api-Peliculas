@@ -3,32 +3,36 @@ $Color2: #606470;
 $Color3: #f1c40f;
 $Color4: #eeeeee;
 
-.serieInfo{
-  .backBox{
+.serieInfo {
+  .backBox {
     position: relative;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    .box{
-      display:flex;
-      padding:50px;
-      img{
+
+    .box {
+      display: flex;
+      padding: 50px;
+
+      img {
         border: 1px solid $Color2;
         border-radius: 10px;
       }
-      .infoSerie{
+
+      .infoSerie {
         padding: 50px;
-        .title{
-            font-size: x-large;
-            padding-bottom: 20px;
+
+        .title {
+          font-size: x-large;
+          padding-bottom: 20px;
+        }
+
+        .resumenSerie {
+          p{
+            font-size: 1.2em;
+          }
         }
       }
-    }  
+    }
   }
-}
-
-.spinner{
-  justify-content: center;
-  display: flex;
-  
 }
