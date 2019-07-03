@@ -5,11 +5,6 @@
   </div>
 
   <div class="filtros">
-    <div class="temas">
-      <select name="tema">
-        <option *ngFor="let genre of genres" value="{{genre.name}}">{{genre.name}}</option>
-      </select>
-    </div>
     <div class="orden">
       <div class="fName">
         <div class="filtroNombreAscendente filtro" (click)="byName('nameAscendant')">
@@ -41,6 +36,13 @@
           <p class="fPopularD">⬇️</p>
         </div>
       </div>
+    </div>
+    <div class="temas">
+      <ul>
+        <li *ngFor="let genre of genres" >
+          <p (click)="byGenre(genre.id)">{{genre.name}}</p>
+        </li>
+      </ul>
     </div>
   </div>
 

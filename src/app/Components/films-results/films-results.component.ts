@@ -11,6 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 export class FilmsResultsComponent implements OnInit, DoCheck {
 
   private pageTitle: string;
+
+  private genreSelected: number = 0;
   private orderBy: string;
   private resultType: any;
   private peliculas: Object[]
@@ -18,7 +20,7 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
   private totalPages: number;
   private languaje: string = "en-US";
 
-  private genres: string[];
+  private genres: any = [{ "id": 0, "name": "Todas" }];
 
   constructor(
     private peliculasService: PeliculasService,
@@ -72,9 +74,7 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
   nextPage() {
     if (this.page < this.totalPages) {
       this.page++;
-      this.peliculasService.getTodasPeliculas(this.page, this.languaje, this.resultType).subscribe(value => {
-        this.peliculas = value.results;
-      }, error => console.log('No se han podido recuperar los datos'))
+      this.getMovie(this.page);
       console.log(this.page);
     }
   }
@@ -82,14 +82,24 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
   previousPage() {
     if (this.page > 1) {
       this.page--;
-      this.peliculasService.getTodasPeliculas(this.page, this.languaje, this.resultType).subscribe(value => {
-        this.peliculas = value.results;
-      }, error => console.log('No se han podido recuperar los datos'));
+      this.getMovie(this.page);
       console.log(this.page);
     }
   }
 
-
+  getMovie(page: number) {
+    if (this.genreSelected === 0) {
+      this.peliculasService.getTodasPeliculas(page, this.languaje, this.resultType).subscribe(value => {
+        this.peliculas = value.results;
+        this.totalPages = value.total_pages;
+      }, error => console.log('No se han podido recuperar los datos'))
+    } else {
+      this.peliculasService.getPeliByGenre(this.genreSelected, page).subscribe(value => {
+        this.peliculas = value.results;
+        this.totalPages = value.total_pages;
+      }, error => console.log(error));
+    }
+  }
 
   byName(order: string) {
     this.orderBy = order;
@@ -123,7 +133,7 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
     console.log(this.orderBy);
     if (this.peliculas) {
       if (order === 'dateAscendant') {
-        this.peliculas.sort((a:Object, b:Object) => {
+        this.peliculas.sort((a: Object, b: Object) => {
           if (a['release_date'] < b['release_date']) {
             return 1;
           }
@@ -133,7 +143,7 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
           return 0;
         });
       } else {
-        this.peliculas.sort((a:Object, b:Object) => {
+        this.peliculas.sort((a: Object, b: Object) => {
           if (a['release_date'] > b['release_date']) {
             return 1;
           }
@@ -177,8 +187,20 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
 
   getGenres() {
     let allGenres = this.peliculasService.getAllGenres().subscribe(value => {
-      this.genres = value['genres'];
+      this.genres = [
+        ...this.genres,
+        ...value['genres']
+      ];
+      console.log(this.genres);
     }, error => console.log(error));
+  }
+
+  byGenre(id: string) {
+    console.log(id);
+    this.genreSelected = +id;
+    console.log(this.genreSelected);
+    this.page = 1;
+    this.getMovie(this.page);
   }
 
 }
