@@ -1,9 +1,11 @@
-<div class="serieInfo">
-    <div class="backBox"> 
-            <img src="https://image.tmdb.org/t/p/w500/{{serieInfo.backdrop_path}}" alt="{{serieInfo.name}}" class="caratula">
-      <div class="box">
-          <img src="https://image.tmdb.org/t/p/w500/{{serieInfo.poster_path}}" alt="{{serieInfo.name}}">
+<div class="serieInfo" *ngIf="serieInfo">
 
-        </div>
+  <div class="backBox" *ngIf="palette" [ngStyle]="styleContainer()">
+   
+
+    <div class="box">
+      <img src="https://image.tmdb.org/t/p/w780/{{serieInfo?.poster_path}}" alt="{{serieInfo?.name}}">
+
     </div>
+  </div>
 </div>

@@ -6,11 +6,11 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
-    
+    "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "module": "esnext",
-
+    "emitDecoratorMetadata": true,
     "importHelpers": true,
     "target": "es2015",
     "typeRoots": [
@@ -20,5 +20,6 @@
       "es2018",
       "dom"
     ]
-  }
+  },
+  "allowJs": true
 }
