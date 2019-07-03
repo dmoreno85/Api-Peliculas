@@ -1,15 +1,19 @@
+
+<!-- --------Peliculas-------- -->
+
 <div class="top">
     <h2>Top 5 Peliculas</h2>
   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Mejores 5 Peliculas
+    <button class="form-select-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Mejores 5 Peliculas de 
     </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" value='2019'>
       <a class="dropdown-item" (click)="filtrarPorMejores(2019)">2019</a>
       <a class="dropdown-item" (click)="filtrarPorMejores(2018)">2018</a>
       <a class="dropdown-item" (click)="filtrarPorMejores(2017)">2017</a>
-      <a class="dropdown-item" (click)="filtrarPorMejoresIntervalo(2009, 2019)">Última Decada</a>
-      <a class="dropdown-item" (click)="filtrarPorMejoresIntervalo(0,2019)">De La Historia</a>  
+      <a class="dropdown-item" (click)="filtrarPorMejoresIntervalo(2009, 2019)">la Decada</a>
+      <a class="dropdown-item" (click)="filtrarPorMejoresIntervalo(0,2019)"> la Historia</a>  
+      
     </div>
   </div>
 </div>
@@ -22,4 +26,33 @@
       <img class="primera" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" 
       alt="{{peliculas.title}}"/></div>
     </div>
+</div>
+
+
+<!-- --------Series-------- -->
+<div class="top">
+  <h2>Top 5 Series</h2>
+<div class="dropdown">
+  <button class="form-select-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Mejores 5 Series de 
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" value='2019'>
+    <a class="dropdown-item" (click)="filtrarPorMejoresSeries(2019)">2019</a>
+    <a class="dropdown-item" (click)="filtrarPorMejoresSeries(2018)">2018</a>
+    <a class="dropdown-item" (click)="filtrarPorMejoresSeries(2017)">2017</a>
+    <a class="dropdown-item" (click)="filtrarPorMejoresIntervaloSeries(2009, 2019)">la Decada</a>
+    <a class="dropdown-item" (click)="filtrarPorMejoresIntervaloSeries(0,2019)"> la Historia</a>  
+    
+  </div>
+</div>
+</div>
+
+
+<div class="Component">
+<div class="ficha" *ngFor="let movie of series">
+  <div class="primera" event=show.bs.dropdown>
+    <h3>{{serie.title}}</h3>
+    <img class="primera" src="https://image.tmdb.org/t/p/w500/{{series.poster_path}}" 
+    alt="{{peliculas.title}}"/></div>
+  </div>
 </div>
