@@ -1,15 +1,24 @@
-<div class="peliInfo">
+<div class="spinner" *ngIf="!peliInfo">
+  <img src="../../../assets//images/spinner.gif" alt="spinner">
+</div>
+<div class="peli-info" *ngIf="peliInfo && palette" [ngStyle]="styleContainer()">
+  
     <div class="posterPeli">
-        <img src="https://image.tmdb.org/t/p/w500/{{peliInfo?.poster_path}}" alt="{{peliInfo?.title}}" title="{{peliInfo?.title}}"/>
+      <img src="https://image.tmdb.org/t/p/w500/{{peliInfo?.poster_path}}" alt="{{peliInfo?.title}}"
+        title="{{peliInfo?.title}}" />
     </div>
     <div class="infoPeli">
-        <div class="title">
-            <h2>{{peliInfo?.title}}</h2>
+      <div class="title">
+        <h2>{{peliInfo?.title}}</h2>
+      </div>
+      <div class="resumenPeli">
+        <div>
+          <h3>{{peliInfo?.overview}}</h3>
         </div>
-        <div class="resumenPeli">
-            <div>
-                <h3>{{peliInfo?.overview}}</h3>
-            </div>
-        </div>
+      </div>
     </div>
+<<<<<<< HEAD
+=======
+  
+>>>>>>> David
 </div>

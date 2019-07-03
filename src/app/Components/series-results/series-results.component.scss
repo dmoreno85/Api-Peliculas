@@ -3,6 +3,12 @@ $Color2: #606470;
 $Color3: #f1c40f;
 $Color4: #eeeeee;
 
+.spinner {
+  justify-content: center;
+  display: flex;
+
+}
+
 #divAllFilms {
   justify-content: center;
   align-items: center;
@@ -20,7 +26,7 @@ $Color4: #eeeeee;
 
     .pageTitle h2 {
       font-size: 2.5em;
-      width:100%;
+      width: 100%;
       text-align: center;
       text-shadow: 0 0 5px $Color2;
     }
@@ -110,7 +116,7 @@ $Color4: #eeeeee;
       align-items: center;
       display: flex;
       flex-flow: row wrap;
-  
+
       .individualFilm {
         border: 1px solid $Color2;
         border-radius: 10px;
@@ -124,25 +130,25 @@ $Color4: #eeeeee;
         flex-direction: column;
         transition: 0.5s;
         position: relative;
-  
+
         &:hover {
           box-shadow: 0 0 20px 0 $Color2;
           transition: 0.5s;
         }
-  
+
         &:hover .posterFilm img {
           filter: grayscale(0%);
           transition: 0.5s;
           width: 400px;
           height: 550px;
         }
-  
+
         .posterFilm {
           background: green;
           justify-content: center;
           align-items: center;
           display: flex;
-  
+
           img {
             filter: grayscale(50%);
             width: 360px;
@@ -150,7 +156,7 @@ $Color4: #eeeeee;
             transition: 0.5s;
           }
         }
-  
+
         .infoFilm {
           position: absolute;
           bottom: 0;
@@ -161,10 +167,10 @@ $Color4: #eeeeee;
           align-items: center;
           display: flex;
           flex-direction: column;
-  
+
           .title {
             width: 100%;
-  
+
             h2 {
               padding: 10px;
               text-align: center;
@@ -180,7 +186,7 @@ $Color4: #eeeeee;
         }
       }
     }
-  
+
 
     .paginacion {
 
@@ -205,8 +211,8 @@ $Color4: #eeeeee;
   }
 }
 
-@media (max-width: 750px){
-  #divAllFilms{
+@media (max-width: 750px) {
+  #divAllFilms {
     padding: 0;
     transition: 0.5s;
   }

@@ -1,8 +1,10 @@
-<div class="componentPrincipal">
-    <a [routerLink]="['/pelis/all']" *ngFor="let movie of peliculas">
-      <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}" title="{{movie.title}}" />
-    </a>
+<div class="spinner" *ngIf="!loaded">
+  <img src="../../../assets//images/spinner.gif" alt="">
 </div>
-
+<div class="componentPrincipal" *ngIf="loaded">
+  <a [routerLink]="['/pelis/all']" *ngFor="let movie of peliculas">
+    <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}" title="{{movie.title}}" />
+  </a>
+</div>
 
 <!-- https://api.themoviedb.org/3/movie/550?api_key=57100bbbe8d760beada498e98fb84066 -->

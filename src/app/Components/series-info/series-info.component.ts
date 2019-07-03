@@ -10,7 +10,6 @@ import { Palette } from 'node-vibrant/lib/color'
   styleUrls: ['./series-info.component.scss']
 })
 export class SeriesInfoComponent implements OnInit {
-  private background: string;
   private id: string;
   private serieInfo: any;
   private language: string = "es-ES"

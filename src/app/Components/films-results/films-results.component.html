@@ -1,9 +1,11 @@
-<div id="divAllFilms">
+<div class="spinner" *ngIf="!peliculas">
+  <img src="../../../assets//images/spinner.gif" alt="spinner">
+</div>
+<div id="divAllFilms" *ngIf="peliculas">
   <div class="content">
     <div class="pageTitle">
       <h2>{{pageTitle}}</h2>
     </div>
-
     <div class="filtros">
       <div class="orden">
         <div class="fName">
@@ -67,5 +69,6 @@
         <p>{{page}} de {{totalPages}}</p>
         <p class="arrow" (click)="nextPage()">▶️</p>
       </div>
+    </div>
   </div>
 </div>
