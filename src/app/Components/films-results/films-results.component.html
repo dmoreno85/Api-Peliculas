@@ -39,8 +39,8 @@
     </div>
     <div class="temas">
       <ul>
-        <li *ngFor="let genre of genres" >
-          <p (click)="byGenre(genre.id)">{{genre.name}}</p>
+        <li *ngFor="let genre of genres" (click)="byGenre(genre.id)">
+          <p>{{genre.name}}</p>
         </li>
       </ul>
     </div>

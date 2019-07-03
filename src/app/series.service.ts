@@ -29,4 +29,11 @@ export class SeriesService {
   getInfoSerie(id: String, language: String): Observable<Object> {
     return this.http.get(`https://api.themoviedb.org/3/tv/${id}?api_key=57100bbbe8d760beada498e98fb84066&language=${language}`);
   };
+
+  getAllGenres(): Observable<any> {
+    return this.http.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=57100bbbe8d760beada498e98fb84066&language=en-US`)
+  }
+  getSerieByGenre(genre: number, page: Number): Observable<any> {
+    return this.http.get(`https://api.themoviedb.org/3/discover/tv?with_genres=${genre}&api_key=57100bbbe8d760beada498e98fb84066&page=${page}`)
+  }
 }

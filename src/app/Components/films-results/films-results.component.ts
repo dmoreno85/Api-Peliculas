@@ -186,7 +186,7 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
   }
 
   getGenres() {
-    let allGenres = this.peliculasService.getAllGenres().subscribe(value => {
+    this.peliculasService.getAllGenres().subscribe(value => {
       this.genres = [
         ...this.genres,
         ...value['genres']
