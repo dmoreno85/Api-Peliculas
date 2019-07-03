@@ -35,8 +35,8 @@ export class PeliculasService {//generamos el servicio con ng g service [nombre 
     return this.http.get(`https://api.themoviedb.org/3/movie/${id}?api_key=57100bbbe8d760beada498e98fb84066`);
   }
 
-  getPeliculasByYear(year: number): Observable<any> {
-    return this.http.get(`https://api.themoviedb.org/3/discover/movie?api_key=57100bbbe8d760beada498e98fb84066&primary_release_year=${year}&sort_by=vote_average.desc`);
+   getPeliculasByYear(year:number):Observable<any>{
+    return this.http.get(`https://api.themoviedb.org/3/discover/movie?api_key=57100bbbe8d760beada498e98fb84066&primary_release_year=${year}&primary_by=vote_average.dec`);
 
   }
 

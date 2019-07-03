@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { PeliculasService} from  '../../peliculas.service';
+import { SeriesService} from  '../../series.service';
 @Component({
   selector: 'app-content-secundario',
   templateUrl: './content-secundario.component.html',
   styleUrls: ['./content-secundario.component.scss']
 })
 
+
 export class ContentSecundarioComponent implements OnInit {
   private peliculas:Object[]
+  private series:Object[]
   year:number;
-  constructor(private peliculasService: PeliculasService) { }//aquí inyecto el servicio PeliculasService al componente upcoming-movies)
+    constructor(private peliculasService: PeliculasService , private SeriesService:SeriesService) { }//aquí inyecto el servicio PeliculasService al componente upcoming-movies)
 
   ngOnInit() {
   }
@@ -20,6 +23,14 @@ export class ContentSecundarioComponent implements OnInit {
   filtrarPorMejoresIntervalo(desde:number,hasta:number):void{
     console.log(this.year)
     this.peliculasService.getPeliculasByYear(this.year).subscribe(res => this.peliculas=res.results.splice(0,5), error=>console.log(error))
- 
+    
+  }
+  filtrarPorMejoresSeries(year:number):void{
+    console.log(year)
+    this.SeriesService.getSeriesByYear(year).subscribe(res => this.series=res.results.splice(0,5), error=>console.log(error))
+  }
+  filtrarPorMejoresIntervaloSeries(desde:number,hasta:number):void{
+    console.log(this.year)
+    this.SeriesService.getSeriesByYear(this.year).subscribe(res => this.series=res.results.splice(0,5), error=>console.log(error))
   }
 }
