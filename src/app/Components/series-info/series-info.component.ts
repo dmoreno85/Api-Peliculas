@@ -4,8 +4,6 @@ import { ActivatedRoute } from '@angular/router'
 import Vibrant from 'node-vibrant'
 import { Palette } from 'node-vibrant/lib/color'
 
-
-
 @Component({
   selector: 'app-series-info',
   templateUrl: './series-info.component.html',
@@ -16,15 +14,12 @@ export class SeriesInfoComponent implements OnInit {
   private id: string;
   private serieInfo: any;
   private language: string = "es-ES"
-
   private transparencia: string = "d4"
-
   private palette: Palette;
   private obj: any;
   constructor(
     private seriesService: SeriesService,
     private route: ActivatedRoute,
-
   ) { }
 
   ngOnInit() {
@@ -38,17 +33,12 @@ export class SeriesInfoComponent implements OnInit {
         console.log(err)
         this.palette = palette;
       });
-
     }, error => console.log(error))
-
-
   }
 
   styleContainer(): any {
     console.log('palette', this.palette);
     if (this.palette.LightVibrant) {
-
-
       return {
         'background-image': `linear-gradient(${this.palette.LightVibrant.getHex()}${this.transparencia},${this.palette.LightVibrant.getHex()}${this.transparencia}), url('https://image.tmdb.org/t/p/w780${this.serieInfo.backdrop_path}')`
       }
@@ -58,7 +48,5 @@ export class SeriesInfoComponent implements OnInit {
         'background-image': `linear-gradient(${this.palette.LightMuted.getHex()}${this.transparencia},${this.palette.LightMuted.getHex()}${this.transparencia}), url('https://image.tmdb.org/t/p/w780${this.serieInfo.backdrop_path}')`
       };
     }
-
   }
-
 }
