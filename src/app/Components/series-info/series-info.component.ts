@@ -5,7 +5,6 @@ import Vibrant from 'node-vibrant'
 import { Palette } from 'node-vibrant/lib/color'
 import { DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 
-
 @Component({
   selector: 'app-series-info',
   templateUrl: './series-info.component.html',
@@ -41,21 +40,15 @@ export class SeriesInfoComponent implements OnInit {
         this.palette = palette;
       });
 
+      this.seriesService.getCreditsSerie(this.id,this.language).subscribe(
+        res=>this.serieInfo.credits=res['cast']
+      );
+
       this.seriesService.getTrailerSeries(this.id,this.language).subscribe(
         res=>{
           this.url=this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+res.results[1].key)
         }
       )
-
-
-
-
-      // this.seriesService.getTrailerSerie(this.id,this.language).subscribe(res=>{
-      //   this.trailer+=res.results[1].key;
-      //   console.log(this.trailer)
-      //   const iframe= document.getElementById("iframeVideo");
-      //   iframe.setAttribute("src", this.trailer);
-      // })
     }, error => console.log(error))
   }
 

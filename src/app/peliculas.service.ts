@@ -31,9 +31,13 @@ export class PeliculasService {//generamos el servicio con ng g service [nombre 
     return this.http.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=57100bbbe8d760beada498e98fb84066&language=en-US`)
   }
 
-  getPeliInfo(id): Observable<any> {
+  getPeliInfo(id: String, language: String): Observable<any> {
     return this.http.get(`https://api.themoviedb.org/3/movie/${id}?api_key=57100bbbe8d760beada498e98fb84066`);
   }
+
+  getTrailersPelis(id: String, language: String): Observable<any> {
+    return this.http.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=57100bbbe8d760beada498e98fb84066&language=${language}`);
+  };
 
   getPeliculasByYear(year:number):Observable<any>{
     return this.http.get(`https://api.themoviedb.org/3/discover/movie?api_key=57100bbbe8d760beada498e98fb84066&primary_release_year=${year}&primary_by=vote_average.dec`);

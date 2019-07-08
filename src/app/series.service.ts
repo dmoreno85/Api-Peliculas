@@ -29,6 +29,10 @@ export class SeriesService {
     return this.http.get(`https://api.themoviedb.org/3/tv/${id}?api_key=57100bbbe8d760beada498e98fb84066&language=${language}`);
   };
 
+  getCreditsSerie(id: String, language: String): Observable<Object> {
+    return this.http.get(`https://api.themoviedb.org/3/tv/${id}/credits?api_key=57100bbbe8d760beada498e98fb84066&language=${language}`);
+  };
+
   getTrailerSeries(id: String, language: String): Observable<any> {
     return this.http.get(`https://api.themoviedb.org/3/tv/${id}/videos?api_key=57100bbbe8d760beada498e98fb84066&language=${language}`);
   };
