@@ -9,8 +9,12 @@ import { PeliculasService } from '../../peliculas.service';
 export class ContentPrincipalComponent implements OnInit {
   private peliculas:Object[]
   constructor(private peliculasService: PeliculasService) { }//aquí inyecto el servicio PeliculasService al componente upcoming-movies)
-
+  loaded:boolean=false
   ngOnInit() {
-    this.peliculasService.getEstrenosPeliculas().subscribe(res => this.peliculas=res.results.splice(0,8), error=>console.log(error))
+    this.peliculasService.getEstrenosPeliculas().subscribe(res =>{
+       this.peliculas=res.results.splice(0,8);
+       this.peliculasService.principalLoaded=true;
+       this.loaded=true
+    }, error=>console.log(error))
   }
 }
