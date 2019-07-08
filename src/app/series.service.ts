@@ -7,7 +7,8 @@ import { Observable } from 'rxjs' //importo el Observable para tipar el método 
 })
 export class SeriesService {
   constructor(private http: HttpClient) { } // aquí inyectamos el httpClient como dependencia del servicio PeliculasService
-
+  searchResults: any;
+  searchInput: string;
   getEstrenosSeries(): Observable<any> {
     return this.http.get('https://api.themoviedb.org/3/tv/latest?api_key=57100bbbe8d760beada498e98fb84066&language=${language}&page=${page}');
   };
@@ -33,7 +34,7 @@ export class SeriesService {
     return this.http.get(`https://api.themoviedb.org/3/tv/${id}/videos?api_key=57100bbbe8d760beada498e98fb84066&language=${language}`);
   };
 
-  getSeriesByYear(year:number): Observable<any> {
+  getSeriesByYear(year: number): Observable<any> {
     return this.http.get(`https://api.themoviedb.org/3/discover/tv/?api_key=57100bbbe8d760beada498e98fb84066&year=${year}`);
   };
 
@@ -42,6 +43,9 @@ export class SeriesService {
   }
   getSerieByGenre(genre: number, page: Number): Observable<any> {
     return this.http.get(`https://api.themoviedb.org/3/discover/tv?with_genres=${genre}&api_key=57100bbbe8d760beada498e98fb84066&page=${page}`)
+  }
+  getSearch(page: number, search: string): Observable<any> {
+    return this.http.get(`https://api.themoviedb.org/3/search/multi?api_key=57100bbbe8d760beada498e98fb84066&language=en-US&query=${search}&page=${page}`)
   }
 }
 
