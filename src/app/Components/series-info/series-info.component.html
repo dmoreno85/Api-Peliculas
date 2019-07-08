@@ -16,6 +16,9 @@
         <div class="resumenSerie">
           <h3>{{serieInfo?.overview}}</h3>
         </div>
+        <div *ngFor="let credit of serieInfo.credits">
+          <h4>{{credit.name}}</h4>
+        </div>
         <div class="trailerSerie">
           <iframe width="560" height="315" [src]="url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
