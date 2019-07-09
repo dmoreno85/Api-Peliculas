@@ -26,14 +26,9 @@ export class PeliInfoComponent implements OnInit {
     private peliculasService: PeliculasService,
     private route:ActivatedRoute,
     private sanitizer: DomSanitizer
-
-    ) { }
+  ) { }
 
   ngOnInit() {
-    // this.route.params.subscribe(params=>{ 
-
-    //   this.peliculasService.getPeliInfo(params.id) 
-    //   .subscribe(res=>this.peliInfo=res)
     this.id = this.route.snapshot.paramMap.get("id");
     this.peliculasService.getPeliInfo(this.id, this.language).subscribe(value => {
 
@@ -53,6 +48,7 @@ export class PeliInfoComponent implements OnInit {
       )
     }, error => console.log(error))
   }
+
   styleContainer(): any {
     console.log('palette', this.palette);
     if (this.palette.LightVibrant) {
