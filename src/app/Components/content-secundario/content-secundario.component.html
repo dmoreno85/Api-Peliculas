@@ -1,32 +1,18 @@
-<<<<<<< HEAD
-<!-- --------Peliculas-------- -->
-  <div class="top">
-  <div class="topPeliculas">
-=======
-
 <div class="top" *ngIf="principalLoaded">
->>>>>>> 5285e2fcea2ef969d5ec90ca0e249e915e10071b
-    <h2>Top 5 Peliculas</h2>
-    <div class="dropdown">
-      
-      <ul><div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-       <li><a class="dropdown-item" (click)="filtrarPorMejores(2019)">2019</a></li>
-       <li><a class="dropdown-item" (click)="filtrarPorMejores(2018)">2018</a></li>
-        <li><a class="dropdown-item" (click)="filtrarPorMejores(2017)">2017</a></li>
-          <li><a class="dropdown-item" (click)="filtrarPorMejoresIntervalo(2009, 2019)">la Decada</a></li>
-            <li><a class="dropdown-item" (click)="filtrarPorMejoresIntervalo(0,2019)"> la Historia</a></li>
+  <h2>Top 5 Peliculas</h2>
+  <div class="dropdown">
 
-      </div></ul>
-    </div>
-  </div>
-<<<<<<< HEAD
-  <div class="Component">
-    <div class="ficha" *ngFor="let movie of peliculas">
-      <div class="primera" event=show.bs.dropdown>
-        <h3>{{movie.title}}</h3>
-        <img class="primera" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{peliculas.title}}" />
+    <ul>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" (click)="filtrarPorMejores(2019)">2019</a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorMejores(2018)">2018</a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorMejores(2017)">2017</a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorMejoresIntervalo(2009, 2019)">la Decada</a></li>
+        <li><a class="dropdown-item" (click)="filtrarPorMejoresIntervalo(0,2019)"> la Historia</a></li>
+
       </div>
-=======
+    </ul>
+  </div>
 </div>
 
 
@@ -34,16 +20,10 @@
   <div class="ficha" *ngFor="let movie of peliculas">
     <div class="primera" event=show.bs.dropdown>
       <h3>{{movie.title}}</h3>
-      <img class="primera" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" 
-      alt="{{peliculas.title}}"/></div>
->>>>>>> 5285e2fcea2ef969d5ec90ca0e249e915e10071b
+      <img class="primera" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{peliculas.title}}" />
     </div>
   </div>
-  </div>
-  
+</div>
 
-  <app-content-terciario></app-content-terciario>
-  
-  
 
-  
+<app-content-terciario></app-content-terciario>
