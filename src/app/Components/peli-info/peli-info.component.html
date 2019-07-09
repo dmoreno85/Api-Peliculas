@@ -1,3 +1,6 @@
+<div class="spinner" *ngIf="!peliInfo">
+  <img src="../../../assets//images/spinner.gif" alt="spinner">
+</div>
 <div class="peliInfo" *ngIf="peliInfo">
     <div class="backBox" *ngIf="url && palette" [ngStyle]="styleContainer()">
         <div class="box">
@@ -18,5 +21,11 @@
                 </div>
             </div>
         </div>
+        <div class="trailerPeli">
+            <iframe width="560" height="315" [src]="url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
+
