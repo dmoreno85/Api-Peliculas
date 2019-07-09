@@ -16,12 +16,12 @@ export class SearchComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+ 
   }
 
   handleSubmit() {
     this.seriesService.searchInput=this.busqueda;
     this.seriesService.getSearch(1,this.busqueda).subscribe(res => {
-     
       this.seriesService.searchResults=res;
       this.router.navigate(['/results'])
     })
