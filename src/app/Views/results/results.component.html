@@ -6,9 +6,9 @@
       <div class="pageTitle">
         <h2>Resultado de la Busqueda</h2>
       </div>
-      <!-- <div class="filtros">
+      <div class="filtros">
         <div class="orden">
-          <div class="fName">
+          <!-- <div class="fName">
             <div class="filtroNombreAscendente filtro" (click)="byName('nameAscendant')">
               <i class="fNombreA fas fa-font"></i>
               <p class="fNombreA">⬆️</p>
@@ -46,11 +46,11 @@
             </li>
           </ul>
         </div>
-      </div> -->
-  
+      </div>  -->
+   
       <div class="films">
-        <div class="individualFilm" *ngFor="let movie of resultadoBusqueda">
-          <a [routerLink]="['/pelis-info', movie.id]">
+        <div class="individualFilm" *ngFor="let movie of seriesService.searchResults.results">
+          <a [routerLink]="movie.media_type==='tv'? ['/series-info',movie.id] : ['/pelis-info', movie.id]">
             <div class="posterFilm">
               <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
             </div>

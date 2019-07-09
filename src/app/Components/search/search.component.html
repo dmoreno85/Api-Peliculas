@@ -1,10 +1,10 @@
 <div class="search">
   <div class="divSearch">
     <div class="divIcon">
-      <i class="icon fas fa-search"></i>
+      <i class="icon fas fa-search" (click)="handleSubmit() || reference.value=''"></i>
     </div>
     <div class="divInput" >
-      <input type="text" (keyup.enter)="handleSubmit()" [(ngModel)]="busqueda" name="search-film" id="search-filt" placeholder="Buscar película">
+      <input type="text" (keyup.enter)="handleSubmit() || reference.value=''" [(ngModel)]="busqueda" name="search-film" id="search-filt" placeholder="Buscar película" #reference>
     </div>
   </div>
 </div>
