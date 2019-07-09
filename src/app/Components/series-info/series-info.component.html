@@ -1,17 +1,28 @@
+<div class="spinner" *ngIf="!serieInfo">
+  <img src="../../../assets//images/spinner.gif" alt="spinner">
+</div>
+
 <div class="serieInfo" *ngIf="serieInfo">
-  <div class="backBox" *ngIf="palette" [ngStyle]="styleContainer()">
+  <div class="backBox" *ngIf="url && palette" [ngStyle]="styleContainer()">
     <div class="box">
-      <img src="https://image.tmdb.org/t/p/w780/{{serieInfo?.poster_path}}" alt="{{serieInfo?.name}}" title="{{serieInfo?.name}}">
+      <div>
+        <img src="https://image.tmdb.org/t/p/w500/{{serieInfo?.poster_path}}" alt="{{serieInfo?.name}}"
+          title="{{serieInfo?.name}}">
+      </div>
+      <div class="infoSerie">
+        <div class="title">
+          <h2>{{serieInfo?.name}}</h2>
+        </div>
+        <div class="resumenSerie">
+          <h3>{{serieInfo?.overview}}</h3>
+        </div>
+        <div *ngFor="let credit of serieInfo.credits">
+          <h4>{{credit.name}}</h4>
+        </div>
+        <div class="trailerSerie">
+          <iframe width="560" height="315" [src]="url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
-    <div class="infoSerie">
-      <div class="title">
-          <h2>{{serieInfo?.title}}</h2>
-      </div>
-      <div class="resumenSerie">
-          <div>
-              <h3>{{serieInfo?.overview}}</h3>
-          </div>
-      </div>
-  </div>
   </div>
 </div>

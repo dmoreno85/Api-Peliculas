@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 <!-- --------Peliculas-------- -->
   <div class="top">
   <div class="topPeliculas">
+=======
+
+<div class="top" *ngIf="principalLoaded">
+>>>>>>> 5285e2fcea2ef969d5ec90ca0e249e915e10071b
     <h2>Top 5 Peliculas</h2>
     <div class="dropdown">
       
@@ -14,12 +19,24 @@
       </div></ul>
     </div>
   </div>
+<<<<<<< HEAD
   <div class="Component">
     <div class="ficha" *ngFor="let movie of peliculas">
       <div class="primera" event=show.bs.dropdown>
         <h3>{{movie.title}}</h3>
         <img class="primera" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{peliculas.title}}" />
       </div>
+=======
+</div>
+
+
+<div class="Component" *ngIf="principalLoaded">
+  <div class="ficha" *ngFor="let movie of peliculas">
+    <div class="primera" event=show.bs.dropdown>
+      <h3>{{movie.title}}</h3>
+      <img class="primera" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" 
+      alt="{{peliculas.title}}"/></div>
+>>>>>>> 5285e2fcea2ef969d5ec90ca0e249e915e10071b
     </div>
   </div>
   </div>

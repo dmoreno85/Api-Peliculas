@@ -1,69 +1,74 @@
-<div id="divAllFilms">
-
-  <div class="pageTitle">
-    <h2>{{pageTitle}}</h2>
-  </div>
-
-  <div class="filtros">
-    <div class="temas">
-      <select name="tema">
-        <option *ngFor="let genre of genres" value="{{genre.name}}">{{genre.name}}</option>
-      </select>
+<div class="spinner" *ngIf="!peliculas">
+  <img src="../../../assets//images/spinner.gif" alt="spinner">
+</div>
+<div id="divAllFilms" *ngIf="peliculas">
+  <div class="content">
+    <div class="pageTitle">
+      <h2>{{pageTitle}}</h2>
     </div>
-    <div class="orden">
-      <div class="fName">
-        <div class="filtroNombreAscendente filtro" (click)="byName('nameAscendant')">
-          <i class="fNombreA fas fa-font"></i>
-          <p class="fNombreA">⬆️</p>
-        </div>
-        <div class="filtroNombreDesscendente filtro" (click)="byName('nameDescendant')">
-          <i class="fNombreD fas fa-font"></i>
-          <p class="fNombreD">⬇️</p>
-        </div>
-      </div>
-      <div class="fDate">
-        <div class="filtroCalendarAscendent filtro" (click)="byTime('dateAscendant')">
-          <i class="fCalendarA far fa-calendar-alt"></i>
-          <p class="fCalendarA">⬆️</p>
-        </div>
-        <div class="filtroCalendarDescendente filtro" (click)="byTime('dateDescendant')">
-          <i class="fCalendarD far fa-calendar-alt"></i>
-          <p class="fCalendarD">⬇️</p>
-        </div>
-      </div>
-      <div class="fPopular">
-        <div class="filtroValoraciones filtro" (click)="byPopulation('popularityAscendant')">
-          <i class="fValoraciones fas fa-star"></i>
-          <p class="fPopularA">⬆️</p>
-        </div>
-        <div class="filtroValoraciones filtro" (click)="byPopulation('popularityDescendant')">
-          <i class="fValoraciones fas fa-star"></i>
-          <p class="fPopularD">⬇️</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="films">
-    <div class="individualFilm" *ngFor="let movie of peliculas">
-      <a [routerLink]="['/pelis-info', movie.id]">
-        <div class="posterFilm">
-          <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
-        </div>
-        <div class="infoFilm">
-          <div class="title">
-            <h2>{{movie.title}}</h2>
+    <div class="filtros">
+      <div class="orden">
+        <div class="fName">
+          <div class="filtroNombreAscendente filtro" (click)="byName('nameAscendant')">
+            <i class="fNombreA fas fa-font"></i>
+            <p class="fNombreA">⬆️</p>
+          </div>
+          <div class="filtroNombreDesscendente filtro" (click)="byName('nameDescendant')">
+            <i class="fNombreD fas fa-font"></i>
+            <p class="fNombreD">⬇️</p>
           </div>
         </div>
-      </a>
+        <div class="fDate">
+          <div class="filtroCalendarAscendent filtro" (click)="byTime('dateAscendant')">
+            <i class="fCalendarA far fa-calendar-alt"></i>
+            <p class="fCalendarA">⬆️</p>
+          </div>
+          <div class="filtroCalendarDescendente filtro" (click)="byTime('dateDescendant')">
+            <i class="fCalendarD far fa-calendar-alt"></i>
+            <p class="fCalendarD">⬇️</p>
+          </div>
+        </div>
+        <div class="fPopular">
+          <div class="filtroValoraciones filtro" (click)="byPopulation('popularityAscendant')">
+            <i class="fValoraciones fas fa-star"></i>
+            <p class="fPopularA">⬆️</p>
+          </div>
+          <div class="filtroValoraciones filtro" (click)="byPopulation('popularityDescendant')">
+            <i class="fValoraciones fas fa-star"></i>
+            <p class="fPopularD">⬇️</p>
+          </div>
+        </div>
+      </div>
+      <div class="temas">
+        <ul>
+          <li *ngFor="let genre of genres" (click)="byGenre(genre.id)">
+            <p>{{genre.name}}</p>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div class="paginacion">
-    <div class="atras">
-      <p class="arrow" (click)="previousPage()">◀️</p>
-      <p>{{page}} de {{totalPages}}</p>
-      <p class="arrow" (click)="nextPage()">▶️</p>
+    <div class="films">
+      <div class="individualFilm" *ngFor="let movie of peliculas">
+        <a [routerLink]="['/pelis-info', movie.id]">
+          <div class="posterFilm">
+            <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
+          </div>
+          <div class="infoFilm">
+            <div class="title">
+              <h2>{{movie.title}}</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="paginacion">
+      <div class="atras">
+        <p class="arrow" (click)="previousPage()">◀️</p>
+        <p>{{page}} de {{totalPages}}</p>
+        <p class="arrow" (click)="nextPage()">▶️</p>
+      </div>
     </div>
   </div>
 </div>
