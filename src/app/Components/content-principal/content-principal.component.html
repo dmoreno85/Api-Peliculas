@@ -1,10 +1,46 @@
-<div class="spinner" *ngIf="!loaded">
+<div class="spinner" *ngIf="!peliculas">
   <img src="../../../assets//images/spinner.gif" alt="">
 </div>
-<div class="componentPrincipal" *ngIf="loaded">
-  <a [routerLink]="['/pelis/all']" *ngFor="let movie of peliculas">
+<div class="componentPrincipal" *ngIf="peliculas">
+  <div class="pelis">
+    <div class="divIzq">
+      <a [routerLink]="['/pelis-info/' + peliculas[0].id]">
+        <div class="divPeli">
+          <img src="https://image.tmdb.org/t/p/w500/{{peliculas[0].poster_path}}" alt="{{peliculas[0].title}}"
+            title="{{peliculas[0].title}}" />
+        </div>
+      </a>
+    </div>
+    <dir class="divDer">
+      <a [routerLink]="['/pelis-info/' + peliculas[1].id]">
+        <div class="divPeli">
+          <img src="https://image.tmdb.org/t/p/w500/{{peliculas[1].poster_path}}" alt="{{peliculas[1].title}}"
+            title="{{peliculas[1].title}}" />
+        </div>
+      </a>
+      <a [routerLink]="['/pelis-info/' + peliculas[2].id]">
+        <div class="divPeli">
+          <img src="https://image.tmdb.org/t/p/w500/{{peliculas[2].poster_path}}" alt="{{peliculas[2].title}}"
+            title="{{peliculas[2].title}}" />
+        </div>
+      </a>
+      <a [routerLink]="['/pelis-info/' + peliculas[3].id]">
+        <div class="divPeli">
+          <img src="https://image.tmdb.org/t/p/w500/{{peliculas[3].poster_path}}" alt="{{peliculas[3].title}}"
+            title="{{peliculas[3].title}}" />
+        </div>
+      </a>
+      <a [routerLink]="['/pelis-info/' + peliculas[4].id]">
+        <div class="divPeli">
+          <img src="https://image.tmdb.org/t/p/w500/{{peliculas[4].poster_path}}" alt="{{peliculas[4].title}}"
+            title="{{peliculas[4].title}}" />
+        </div>
+      </a>
+    </dir>
+  </div>
+  <!-- <a [routerLink]="['/pelis/all']" *ngFor="let movie of peliculas">
     <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}" title="{{movie.title}}" />
-  </a>
+  </a> -->
 </div>
 
 <!-- https://api.themoviedb.org/3/movie/550?api_key=57100bbbe8d760beada498e98fb84066 -->
