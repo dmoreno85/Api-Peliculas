@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SeriesService} from  '../../series.service';
+import { SafeResourceUrl} from '@angular/platform-browser';
 @Component({
   selector: 'app-content-terciario',
   templateUrl: './content-terciario.component.html',

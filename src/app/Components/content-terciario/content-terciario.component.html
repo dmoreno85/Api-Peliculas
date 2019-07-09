@@ -1,7 +1,7 @@
 <!-- --------Series-------- -->
 <div class="topS">
 <div class="topSeries">
-    <h2>Top 5 Series</h2>
+    <h2>Top 6 Series</h2>
     <div class="dropdown">
         <ul><div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <li><a class="dropdown-item" (click)="filtrarPorMejoresSeries(2019)">2019</a></li>
@@ -19,8 +19,7 @@
       <div class="ficha" *ngFor="let tv of serieInfo ">
         <div class="primera" event=show.bs.dropdown>
           <h3>{{tv.title}}</h3>
-          <img class="primera" src="https://image.tmdb.org/t/p/w500/{{tv.poster_path}}" alt="{{serieInfo.title}}" />
-        </div>
+          <img class="primera" src="https://image.tmdb.org/t/p/w500/{{tv.poster_path}}" alt="{{serieInfo.title}}" /></div>
       </div>
     </div>
   </div>
