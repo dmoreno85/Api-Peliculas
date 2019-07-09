@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SeriesService } from 'src/app/series.service';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-results',
@@ -22,9 +23,13 @@ export class ResultsComponent implements OnInit {
 
   constructor(
     private seriesService: SeriesService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
+    if (!this.seriesService.searchInput) {
+      this.router.navigate(['/'])
+    }
     this.searchInput = this.seriesService.searchInput;
     this.totalPages = this.seriesService.searchResults.total_pages;
     this.resultadoBusqueda = this.seriesService.searchResults.results;
