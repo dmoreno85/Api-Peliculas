@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule } from '@angular/router'
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
@@ -44,12 +45,14 @@ import { ContentTerciarioComponent } from './Components/content-terciario/conten
     FilmsResultsComponent,
     SeriesResultsComponent,
     SeriesInfoComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

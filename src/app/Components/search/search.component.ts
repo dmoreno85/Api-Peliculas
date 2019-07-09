@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SeriesService } from '../../series.service';
+import {Router} from '@angular/router'
+
 
 @Component({
   selector: 'app-search',
@@ -6,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-
-  constructor() { }
+  private busqueda: string;
+  constructor(
+    private seriesService: SeriesService,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
   }
 
+  handleSubmit() {
+    this.seriesService.searchInput=this.busqueda;
+    this.seriesService.getSearch(1,this.busqueda).subscribe(res => {
+     
+      this.seriesService.searchResults=res;
+      this.router.navigate(['/results'])
+    })
+    // this.userService.register(this.form.value).subscribe(res=>console.log(res))
+  }
 }
