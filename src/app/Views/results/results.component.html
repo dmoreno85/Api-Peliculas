@@ -50,7 +50,7 @@
   
       <div class="films">
         <div class="individualFilm" *ngFor="let movie of resultadoBusqueda">
-          <a [routerLink]="['/pelis-info', movie.id]">
+          <a [routerLink]="movie.media_type==='tv'? ['/series-info',movie.id] : ['/pelis-info', movie.id]">
             <div class="posterFilm">
               <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
             </div>
