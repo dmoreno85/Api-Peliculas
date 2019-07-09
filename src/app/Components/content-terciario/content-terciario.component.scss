@@ -1,0 +1,77 @@
+
+div .topS{
+    
+    margin: 50px 141px;
+    align-content: center;
+    box-shadow: 0 0 20px 5px black;
+    background-color: transparent;
+    width: 92%;
+     
+}
+
+
+h2 {
+all:unset;
+position: relative;
+left: 5.2em;
+font-family: 'BioRhyme', serif;
+font-size: 1.5em;
+}
+
+
+.Component{
+display:flex;
+flex-wrap: wrap;
+align-content: center;
+align-items: center;
+margin: 2.5em;
+width: 92%;
+}
+
+.ficha {
+border-left: 0.5em dashed;
+border-inline-end-style: 0.5em dotted black;
+border-right: 0.5em dashed;
+width: 18em ;
+height: 95%;
+box-shadow: goldenrod;
+padding: 2.5em;
+margin:1em;
+box-shadow: 10px 10px 5px 0px rgba(138, 146, 28, 0.75);
+align-items: center;
+}
+ul{
+    margin-top: 2em;
+    width: 49%;
+    li{
+        all: unset;
+        padding: 1em;
+        color: #323643;
+        background-color: #f1c40f;
+        border: 1px #6c757d solid;
+        box-shadow: 10px 10px 5px 0px rgba(138, 146, 28, 0.75);
+        border-radius: 3px 3px 3px 3px;
+        position: relative;
+        left: 8em;
+              &:hover {
+               transition: all 0.5s ease;
+               color: #fff;
+               background-color: #6c757d;
+               border-color: #545b62;
+               color:#f1c40f;
+               box-shadow: 10px 10px 5px 0px #f1c40f;
+
+              }
+       }
+    }
+img {
+    width: 98% ;
+    height: 95%;
+}
+
+h3 {
+    max-width: 98% ;
+    height: 2em;
+}
+
+
