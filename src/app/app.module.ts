@@ -22,6 +22,7 @@ import { RedesSocialesComponent } from './Components/redes-sociales/redes-social
 import { FilmsResultsComponent } from './Components/films-results/films-results.component';
 import { SeriesResultsComponent } from './Components/series-results/series-results.component';
 import { SeriesInfoComponent } from './Components/series-info/series-info.component';
+import { ContentTerciarioComponent } from './Components/content-terciario/content-terciario.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SeriesInfoComponent } from './Components/series-info/series-info.compon
     IndexComponent,
     SearchComponent,
     ContentSecundarioComponent,
+    ContentTerciarioComponent,
     ResultsComponent,
     SeriesComponent,
     PelisComponent,
