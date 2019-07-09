@@ -12,9 +12,9 @@ export class ContentPrincipalComponent implements OnInit {
   loaded:boolean=false
   ngOnInit() {
     this.peliculasService.getEstrenosPeliculas().subscribe(res =>{
-       this.peliculas=res.results.splice(0,8);
+       this.peliculas=res.results.splice(0,5);
        this.peliculasService.principalLoaded=true;
-       this.loaded=true
+       console.log(this.peliculas);
     }, error=>console.log(error))
   }
 }

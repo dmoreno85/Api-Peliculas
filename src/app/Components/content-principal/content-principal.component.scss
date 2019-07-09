@@ -3,20 +3,146 @@ $Color2: #606470;
 $Color3: #f1c40f;
 $Color4: #eeeeee;
 
-.componentPrincipal{
-    margin: 50px 141px;
+.componentPrincipal {
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  box-shadow: 0 0 20px 5px $Color2;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding: 100px;
+
+  .pelis {
+    border-radius: 10px;
+    overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    box-shadow: 0 0 20px 5px $Color2;
-    background-color: transparent;
-    a, img{
-        height: 400px;
+    transition: 0.5s;
+
+    .divIzq {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      width: 512px;
+      height: 768px;
+
+      a {
+        .divPeli {
+          position: relative;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          overflow: hidden;
+
+          img {
+            width: 512px;
+            height: 768px;
+            transition: 0.5s;
+
+            &:hover {
+              width: 576px;
+              height: 832px;
+              transition: 0.5s;
+            }
+          }
+        }
+      }
     }
+
+    .divDer {
+      display: grid;
+      grid-template-columns: repeat(2, 256px);
+      grid-template-rows: repeat(2, 384px);
+
+      a {
+        .divPeli {
+          position: relative;
+          width: 256px;
+          height: 384px;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          overflow: hidden;
+
+          img {
+            width: 256px;
+            height: 384px;
+            transition: 0.5s;
+
+            &:hover {
+              width: 320px;
+              height: 448px;
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-.spinner{
-    justify-content: center;
-    display: flex;
-    
+.spinner {
+  justify-content: center;
+  display: flex;
+
+}
+
+@media (max-width: 750px) {
+  .componentPrincipal {
+    height: auto;
+    background: #eee;
+
+    .pelis {
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+
+      .divDer,
+      .divIzq {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        width: 360px;
+        height: auto;
+        overflow: hidden;
+
+        a {
+          justify-content: center;
+          align-items: center;
+          display: flex;
+
+          .divPeli {
+            position: relative;
+            width: 360px;
+            height: 480px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+            img {
+              width: 360px;
+              height: 480px;
+              transition: 0.5s;
+
+              &:hover{
+                width: 424px;
+                height: 512px;
+                transition: 0.5s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1250px) {
+  .pelis {
+    flex-direction: column;
+    transition: 0.5s;
+  }
 }
