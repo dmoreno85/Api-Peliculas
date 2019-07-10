@@ -10,7 +10,6 @@ import { PeliculasService } from '../../peliculas.service';
 
 export class ContentSecundarioComponent implements OnInit {
   private peliculas: object[];
-  private series: Object[];
   private id: string;
   year: number;
   principalLoaded: boolean = false;

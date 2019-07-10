@@ -1,28 +1,38 @@
-<!-- --------Series-------- -->
-<div class="topS">
-<div class="topSeries">
-    <h2>Top 5 Series</h2>
+<div class="top">
+  <div class="content">
+    <h2>Top 5 Peliculas</h2>
     <div class="dropdown">
-        <ul><div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" (click)="filtrarPorMejoresSeries(2019)">2019</a></li>
-            <li><a class="dropdown-item" (click)="filtrarPorMejoresSeries(2018)">2018</a></li>
-            <li><a class="dropdown-item" (click)="filtrarPorMejoresSeries(2017)">2017</a></li>
-            <li><a class="dropdown-item" (click)="filtrarPorMejoresIntervaloSeries(2009, 2019)">la Decada</a></li>
-            <li><a class="dropdown-item" (click)="filtrarPorMejoresIntervaloSeries(0,2019)"> la Historia</a></li>
-     
-           </div></ul>
+      <ul>
+        <li (click)="filtrarPorMejoresSeries(2019)">
+          <div class="divItem">
+            <p class="dropdown-item">2019</p>
+          </div>
+        </li>
+        <li (click)="filtrarPorMejoresSeries(2018)">
+          <div class="divItem">
+            <p class="dropdown-item">2018</p>
+          </div>
+        </li>
+        <li (click)="filtrarPorMejoresSeries(2017)">
+          <div class="divItem">
+            <p class="dropdown-item">2017</p>
+          </div>
+        </li>
+      </ul>
     </div>
-</div>
-  
-  
-    <div class="Component">
-      <div class="ficha" *ngFor="let tv of serieInfo ">
-        <div class="primera" event=show.bs.dropdown>
-          <h3>{{tv.title}}</h3>
-          <img class="primera" src="https://image.tmdb.org/t/p/w500/{{tv.poster_path}}" alt="{{serieInfo.title}}" />
+  </div>
+
+  <div class="Component" *ngIf="serieInfo">
+    <div class="ficha" *ngFor="let tv of serieInfo">
+      <div class="film">
+        <div class="divImagen">
+          <img src="https://image.tmdb.org/t/p/w500/{{tv.poster_path}}" alt="{{tv.name}}" />
+          <div class="border"></div>
+        </div>
+        <div class="title">
+          <h3>{{tv.name}}</h3>
         </div>
       </div>
     </div>
   </div>
-  
-  
+</div>
