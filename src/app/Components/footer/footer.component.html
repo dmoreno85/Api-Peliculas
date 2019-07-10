@@ -4,7 +4,7 @@
     <div class="linksFooter">
       <div class="pelisFooter">
         <a [routerLink]="['/pelis','all']">
-          <p>Películas</p>
+          <p class="titFooter">Películas</p>
         </a>
         <a [routerLink]="['/pelis', 'populares']">Populares</a>
         <a [routerLink]="['/pelis', 'novedades']">Novedades</a>
@@ -12,17 +12,29 @@
       </div>
       <div class="seriesFooter">
         <a [routerLink]="['/series', 'all']">
-          <p>Series</p>
+          <p class="titFooter">Series</p>
         </a>
         <a [routerLink]="['/series', 'populares']">Populares</a>
         <a [routerLink]="['/series', 'mejor-puntuadas']">Mejor puntuadas</a>
       </div>
 
     </div>
-    <app-search class="searchFooter"></app-search>
+    <!-- <div class="formFooterMedia">
+        <a [routerLink]="['/pelis','all']">
+          <p class="titFooter">Películas</p>
+        </a>
+        <a [routerLink]="['/series', 'all']">
+          <p class="titFooter">Series</p>
+        </a>
+    </div> -->
+    <div class="centerFooter">
+        <app-search class="searchFooter"></app-search>
+        <app-redes-sociales class="mediaSocialTablet"></app-redes-sociales>
+    </div>
+    
     <div class="autorDiv">
 
-      <app-redes-sociales></app-redes-sociales>
+      <app-redes-sociales class="mediaSocial"></app-redes-sociales>
 
       <div class="autor">
         <div class="iconDatos">

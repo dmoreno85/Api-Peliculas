@@ -13,16 +13,22 @@ $Color4: #eeeeee;
     display: flex;
     justify-content: space-between;
 
-
-    .searchFooter {
-      width: 100vh;
+    .centerFooter{
+      width: 86vh;
       justify-content: center;
       display: flex;
+      flex-direction: column;
       align-items: center;
-
-
+      .searchFooter {
+        width: 100vh;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+  
+      }
 
     }
+    
 
     .autorDiv {
       width: 100vh;
@@ -57,10 +63,9 @@ $Color4: #eeeeee;
           justify-content: center;
           align-items: center;
           display: flex;
-
           margin-right: 15px;
           color: #eee;
-
+          
           i {
             color: $Color4;
 
@@ -77,7 +82,7 @@ $Color4: #eeeeee;
     .linksFooter {
       width: 100vh;
       display: flex;
-          justify-content: space-evenly;
+      justify-content: space-evenly;
       align-items: center;
 
       .pelisFooter {
@@ -86,6 +91,11 @@ $Color4: #eeeeee;
         flex-direction: column;
         justify-content: flex-start;
         margin-top: 20px;
+        font-size: 0.8em;
+
+        .titFooter {
+          font-size: 1.4em;
+        }
       }
 
 
@@ -95,6 +105,11 @@ $Color4: #eeeeee;
         flex-direction: column;
         justify-content: flex-start;
         margin-top: 20px;
+        font-size: 0.8em;
+
+        .titFooter {
+          font-size: 1.4em;
+        }
       }
 
       p {
@@ -105,6 +120,13 @@ $Color4: #eeeeee;
         color: $Color4;
       }
     }
+  }
+
+  .mediaSocialTablet{
+    display:none;
+  }
+  .formFooterMedia{
+    display: none;
   }
 }
 
@@ -117,16 +139,55 @@ $Color4: #eeeeee;
   }
 }
 
+@media (max-width: 1115px){
 
-.redSocial {
-
-  margin-right: 15px;
 }
 
-.Icon {
-  color: white
+
+
+@media (max-width: 963px) {
+  .formFooter{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+  }
+  .mediaSocialTablet{
+      display:block !important;
+    }
+    .mediaSocial{
+      display:none;
+    }
+    .autorDiv{
+     display: none !important;
+      
+    }
+    .linksFooter{
+      display: none !important;
+    }
+    .formFooterMedia{
+      display: block;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+
+    }
+  }
+
+
+
+
+@media (max-width: 750px) {
+  .mediaSocialTablet{
+    display:none !important;
+  }
+  .mediaSocial{
+    display:none ;
+  }
+  .autorDiv{
+    display: none !important;
+     
+   }
+   .linksFooter{
+    display: none !important;
+  }
 }
-
-@media (max-width: 1250px) {}
-
-@media (max-width: 750px) {}
