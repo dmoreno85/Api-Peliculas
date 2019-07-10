@@ -14,120 +14,225 @@ header {
   background: $Color1;
   z-index: 1000;
 
-  .divIzquierdo {
-    justify-content: center;
-    align-items: center;
+  .menuPrincipalPC {
+    transition: 0.5s;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    .logo {
-      padding: 5px 10px 10px 10px;
-      height: 75px;
+    .divIzquierdo {
       justify-content: center;
       align-items: center;
       display: flex;
 
-      a {
-        display: flex;
-        text-shadow: 0 3px 5px $Color2;
-        transition: 0.5s;
+      .logo {
+        padding: 5px 10px 10px 10px;
+        max-height: 75px;
         justify-content: center;
         align-items: center;
-
-        .img-logo {
-          width: 32px;
-          height: 50px;
-        }
-
-        p {
-          font-family: 'Lobster', sans-serif;
-          font-size: 2.5em;
-          color: $Color3;
-          padding: 5px;
-          text-align: center;
-        }
-
-        &:hover {
-          margin-top: 5px;
-          text-shadow: none;
-          transition: 0.2s;
-        }
-      }
-    }
-
-    .menuPrincipal {
-      margin-left: 15px;
-
-      .listaMenuPrincipal {
         display: flex;
-        list-style: none;
 
-        .itemMenu {
-          font-size: 1.3em;
-          padding: 5px;
-          margin: auto 10px;
+        a {
+          display: flex;
+          text-shadow: 0 3px 5px $Color2;
+          transition: 0.5s;
           justify-content: center;
           align-items: center;
-          display: flex;
-          position: relative;
 
-          p {
-            font-size: 1.2em;
-            color: $Color4;
-            transition: 0.5s;
-
-            &:hover {
-              color: $Color3;
-              transition: 0.2s;
-            }
+          .img-logo {
+            max-width: 32px;
+            max-height: 50px;
           }
 
-          .divSubmenu {
-            display: none;
-            position: absolute;
-            background: $Color1;
-            top: 40px;
-            left: 5px;
+          p {
+            font-family: 'Lobster', sans-serif;
+            font-size: 2.5em;
+            color: $Color3;
             padding: 5px;
-            width: 200px;
-            
-            .submenuList {
-              padding-top: 10px;
-              list-style: none;
+            text-align: center;
+          }
 
-              li {
-                color: $Color4;
-                padding: 5px;
-                transition: 0.5s;
+          &:hover {
+            margin-top: 5px;
+            text-shadow: none;
+            transition: 0.2s;
+          }
+        }
+      }
 
-                &:hover a {
-                  color: $Color3;
-                  transition: 0.5s;
-                }
+      .menuPrincipal {
+        margin-left: 15px;
 
-                a {
+        .listaMenuPrincipal {
+          display: flex;
+          list-style: none;
+
+          .itemMenu {
+            font-size: 1.3em;
+            padding: 5px;
+            margin: auto 10px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            position: relative;
+
+            p {
+              font-size: 1.2em;
+              color: $Color4;
+              transition: 0.5s;
+
+              &:hover {
+                color: $Color3;
+                transition: 0.2s;
+              }
+            }
+
+            .divSubmenu {
+              display: none;
+              position: absolute;
+              background: $Color1;
+              top: 40px;
+              left: 5px;
+              padding: 5px;
+              width: 200px;
+
+              .submenuList {
+                padding-top: 10px;
+                list-style: none;
+
+                li {
                   color: $Color4;
+                  padding: 5px;
+                  transition: 0.5s;
+
+                  &:hover a {
+                    color: $Color3;
+                    transition: 0.5s;
+                  }
+
+                  a {
+                    color: $Color4;
+                  }
                 }
               }
             }
           }
-        }
 
-        .btnPeliculas {
-          padding: 5px;
+          .btnPeliculas {
+            padding: 5px;
 
-          &:hover .submenuPelis {
-            display: block;
+            &:hover .submenuPelis {
+              display: block;
+            }
           }
-        }
 
-        .btnSeries {
-          padding: 5px;
+          .btnSeries {
+            padding: 5px;
 
-          &:hover .submenuSeries {
-            display: block;
+            &:hover .submenuSeries {
+              display: block;
+            }
           }
         }
       }
+    }
+  }
+
+  .menuPrincipalMobile {
+    display: none;
+    width: 100%;
+    transition: 0.5s;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+
+    .divSuperior {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        padding: 5px 10px 10px 10px;
+        max-height: 75px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        a {
+          display: flex;
+          text-shadow: 0 3px 5px $Color2;
+          transition: 0.5s;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            max-width: 32px;
+            max-height: 50px;
+          }
+
+          p {
+            font-family: 'Lobster', sans-serif;
+            font-size: 2.5em;
+            color: $Color3;
+            padding: 5px;
+            text-align: center;
+          }
+
+          &:hover {
+            margin-top: 5px;
+            text-shadow: none;
+            transition: 0.2s;
+          }
+        }
+      }
+    }
+
+    .divInferior {
+      padding: 10px;
+
+      .menuPrincipal {
+        .listaMenuPrincipal {
+          list-style: none;
+          display: flex;
+
+          .itemMenu {
+            font-size: 1.3em;
+            padding: 5px;
+            margin: auto 15px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            position: relative;
+
+            p {
+              font-size: 1.2em;
+              color: $Color4;
+              transition: 0.5s;
+
+              &:hover {
+                color: $Color3;
+                transition: 0.2s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1250px) {
+  header {
+    .menuPrincipalPC {
+      display: none;
+      transition: 0.5s;
+    }
+
+    .menuPrincipalMobile {
+      display: flex;
+      transition: 0.5s;
     }
   }
 }
