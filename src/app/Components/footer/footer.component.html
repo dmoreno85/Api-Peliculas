@@ -1,15 +1,32 @@
 <footer class="footer">
 
   <div class="formFooter">
-  <app-formulario></app-formulario>
+    <div class="linksFooter">
+      <div class="pelisFooter">
+        <a [routerLink]="['/pelis','all']">
+          <p>Películas</p>
+        </a>
+        <a [routerLink]="['/pelis', 'populares']">Populares</a>
+        <a [routerLink]="['/pelis', 'novedades']">Novedades</a>
+        <a [routerLink]="['/pelis', 'mejor-puntuadas']">Mejor puntuadas</a>
+      </div>
+      <div class="seriesFooter">
+        <a [routerLink]="['/series', 'all']">
+          <p>Series</p>
+        </a>
+        <a [routerLink]="['/series', 'populares']">Populares</a>
+        <a [routerLink]="['/series', 'mejor-puntuadas']">Mejor puntuadas</a>
+      </div>
+
+    </div>
     <app-search class="searchFooter"></app-search>
     <div class="autorDiv">
-      
-        <app-redes-sociales></app-redes-sociales>
-      
+
+      <app-redes-sociales></app-redes-sociales>
+
       <div class="autor">
         <div class="iconDatos">
-           <i class="fas fa-mobile-alt Icon"></i>
+          <i class="fas fa-mobile-alt Icon"></i>
           <p>Cont: 687 79 54 12</p>
         </div>
         <a href="http://gmail.com" target="_blank" class="iconDatos"> <i class="far fa-envelope Icon"> </i>
