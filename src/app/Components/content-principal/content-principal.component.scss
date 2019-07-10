@@ -7,8 +7,7 @@ $Color4: #eeeeee;
   margin: auto;
   justify-content: center;
   display: flex;
-  background: #eee;
-  box-shadow: 0 0 20px 5px $Color2;
+  background: linear-gradient(transparent, #eeeeee 50%);
   padding: 100px;
 
   .pelis {
