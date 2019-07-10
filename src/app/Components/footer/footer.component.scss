@@ -13,16 +13,22 @@ $Color4: #eeeeee;
     display: flex;
     justify-content: space-between;
 
-
-    .searchFooter {
-      width: 100vh;
+    .centerFooter{
+      width: 86vh;
       justify-content: center;
       display: flex;
+      flex-direction: column;
       align-items: center;
-    
-
+      .searchFooter {
+        width: 100vh;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+  
+      }
 
     }
+    
 
     .autorDiv {
       width: 100vh;
@@ -30,6 +36,7 @@ $Color4: #eeeeee;
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-top: 5px;
 
       .autor {
 
@@ -56,10 +63,9 @@ $Color4: #eeeeee;
           justify-content: center;
           align-items: center;
           display: flex;
-
           margin-right: 15px;
           color: #eee;
-
+          
           i {
             color: $Color4;
 
@@ -70,71 +76,57 @@ $Color4: #eeeeee;
         }
       }
 
-      
+
     }
 
-    // .formDiv {
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   flex-direction: column;
-    //   width: 100vh;
-    //   // width: 50%;
-    //   // display: flex;
-    //   // justify-content: center;
-    //   // flex-direction: column;
-    //   // padding: 13px;
-    //   // color: $Color4;
-    //   // padding-right: 91px;
-    //     .inputDiv{
-    //       // width: 50%;
-    //   display: flex;
-    //   justify-content: center;
-    //   flex-direction: column;
-    //   padding: 13px;
-    //   color: $Color4;
-    
-    //     }
+    .linksFooter {
+      width: 100vh;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
 
-    //   button {
-    //     background: $Color1;
-    //     color:$Color4;
-    //     width: 50px;
-    //     border:solid 1px $Color4;
-    //     border-radius: 2px;
-    //     // // box-shadow: 14px 7px 5px 0px rgba(0, 0, 0, 0.75);
-    //     &:hover{
-    //       transition: 0.3s;
-    //     color: $Color3;
-    //     border:solid 1px $Color3;
-    //     }
-    //   }
-    // }
+      .pelisFooter {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 20px;
+        font-size: 0.8em;
 
-    // .inputs {
-    //   border-radius: 1px;
-    //   margin-bottom: 4px;
-    //   // box-shadow: 14px 7px 5px 0px rgba(0, 0, 0, 0.75);
-    //   width: 41vh;
-    //   background: $Color1;
-    //   border: solid 1px $Color1;
-    //   // outline: none;
-    //   // border: none;
-    //   color:$Color4;
-    //   font-size: 0.8em;
-    //   resize: none;
-    //   &:hover{
-    //     transition: 0.3s;
-    //   color: $Color3;
-    //   border:solid 1px $Color3;
-    //   }
-    //   // &:active{
-    //   //   transition: 0.3s;
-    //   // color: $Color3;
-    //   // border:solid 1px $Color3;
-    //   // }
+        .titFooter {
+          font-size: 1.4em;
+        }
+      }
 
-    // }
+
+      .seriesFooter {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 20px;
+        font-size: 0.8em;
+
+        .titFooter {
+          font-size: 1.4em;
+        }
+      }
+
+      p {
+        color: $Color4;
+      }
+
+      a {
+        color: $Color4;
+      }
+    }
+  }
+
+  .mediaSocialTablet{
+    display:none;
+  }
+  .formFooterMedia{
+    display: none;
   }
 }
 
@@ -147,12 +139,55 @@ $Color4: #eeeeee;
   }
 }
 
+@media (max-width: 1115px){
 
-.redSocial {
-
-  margin-right: 15px;
 }
 
-.Icon {
-  color: white
+
+
+@media (max-width: 963px) {
+  .formFooter{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+  }
+  .mediaSocialTablet{
+      display:block !important;
+    }
+    .mediaSocial{
+      display:none;
+    }
+    .autorDiv{
+     display: none !important;
+      
+    }
+    .linksFooter{
+      display: none !important;
+    }
+    .formFooterMedia{
+      display: block;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+
+    }
+  }
+
+
+
+
+@media (max-width: 750px) {
+  .mediaSocialTablet{
+    display:none !important;
+  }
+  .mediaSocial{
+    display:none ;
+  }
+  .autorDiv{
+    display: none !important;
+     
+   }
+   .linksFooter{
+    display: none !important;
+  }
 }
