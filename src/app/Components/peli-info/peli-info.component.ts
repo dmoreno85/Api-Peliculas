@@ -16,11 +16,8 @@ export class PeliInfoComponent implements OnInit {
   private palette: Palette;
   private transparencia: string = "d4"
   private id: string;
-
   private background: string;
-  
   private language: string = "en-US"
-
   private obj: any;
   private url:SafeResourceUrl;
 
@@ -44,6 +41,10 @@ export class PeliInfoComponent implements OnInit {
         console.log(palette)
         this.palette = palette;
       });
+
+      this.peliculasService.getCreditsPeli(this.id,this.language).subscribe(
+        res=>this.peliInfo.credits=res['cast'].splice(0,4)
+      );
 
       this.peliculasService.getTrailersPelis(this.id,this.language).subscribe(
         res=>{

@@ -3,7 +3,8 @@
 </div>
 
 <div class="serieInfo" *ngIf="serieInfo">
-  <div class="backBox" *ngIf="url && palette" [ngStyle]="styleContainer()">
+
+  <div class="backBox" *ngIf="palette" [ngStyle]="styleContainer()">
     <div class="box">
       <div>
         <img src="https://image.tmdb.org/t/p/w500/{{serieInfo?.poster_path}}" alt="{{serieInfo?.name}}"
@@ -16,12 +17,15 @@
         <div class="resumenSerie">
           <h3>{{serieInfo?.overview}}</h3>
         </div>
+        <h3>Credits</h3>
         <div *ngFor="let credit of serieInfo.credits">
           <h4>{{credit.name}}</h4>
         </div>
-        <div class="trailerSerie">
-          <iframe width="560" height="315" [src]="url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="trailerSerie" *ngIf="url">
+          <button (click)="trailerSerie.style.display='block'">Ver Trailer</button>
+          <iframe #trailerSerie  width="560" height="315" [src]="url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+        <app-formulario></app-formulario>
       </div>
     </div>
   </div>

@@ -24,6 +24,7 @@ import { FilmsResultsComponent } from './Components/films-results/films-results.
 import { SeriesResultsComponent } from './Components/series-results/series-results.component';
 import { SeriesInfoComponent } from './Components/series-info/series-info.component';
 import { ContentTerciarioComponent } from './Components/content-terciario/content-terciario.component';
+import { FormularioComponent } from './Components/formulario/formulario.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ContentTerciarioComponent } from './Components/content-terciario/conten
     FilmsResultsComponent,
     SeriesResultsComponent,
     SeriesInfoComponent,
+    FormularioComponent,
 
   ],
   imports: [

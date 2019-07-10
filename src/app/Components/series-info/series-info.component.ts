@@ -41,7 +41,7 @@ export class SeriesInfoComponent implements OnInit {
       });
 
       this.seriesService.getCreditsSerie(this.id,this.language).subscribe(
-        res=>this.serieInfo.credits=res['cast']
+        res=>this.serieInfo.credits=res['cast'].splice(0,4)
       );
 
       this.seriesService.getTrailerSeries(this.id,this.language).subscribe(
