@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=BioRhyme&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
+
 $Color1: #323643;
 $Color2: #606470;
 $Color3: #f1c40f;
@@ -18,25 +21,74 @@ $Color4: #eeeeee;
         border: 1px solid $Color2;
         border-radius: 10px;
       }
-
       .infoSerie {
         padding: 50px;
 
         .title {
-          font-size: x-large;
+          font-size: 1.5em;
           padding-bottom: 20px;
         }
+        .resumenSerie{
+          padding-bottom: 30px;
+        }
+        & h2:hover{
+          color:$Color3;
+          transition: 0.5s;
+        }
+        >h2{
+          font-size: 2em;
+          padding-bottom: 20px;
+        }
+        .credits{
+          display: flex;
+          justify-content:space-between;
+          padding-bottom: 50px;
 
-        .resumenSerie {
-          p{
-            font-size: 1.2em;
+          & h3:hover{
+            color:$Color3;
+            text-decoration-line: underline;
+            transition: 1s;
           }
         }
+        .trailerSerie{
+          text-align: center;
+          padding-bottom: 40px;
 
-        .trailerSerie iframe{
-          display:none;
+          button{
+            all:unset;
+            cursor: pointer;
+            text-align: center;
+            font-size:2em;
+            font-family: 'BioRhyme', serif;
+            font-weight: bolder;
+            padding-bottom: 20px;
+
+            &:hover{
+              color:$Color3;
+              transition: 0.5s;
+            }
+          }
+          div{
+            display: -webkit-inline-box;
+          }
+          iframe{
+            display:none;
+            border-radius: 10px;
+            border: 1px solid $Color2;
+          }
         }
+        
       }
     }
   }
 }
+@media (max-width: 1250px) {
+  .box {
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+  }
+}
+
+
+

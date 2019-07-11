@@ -76,71 +76,19 @@ $Color4: #eeeeee;
             border-radius: 10px;
             border: 1px solid $Color2;
           }
-          .formInfo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 100vh;
-            // width: 50%;
-            // display: flex;
-            // justify-content: center;
-            // flex-direction: column;
-            // padding: 13px;
-            // color: $Color4;
-            // padding-right: 91px;
-
-            div{
-              // width: 50%;
-              display: flex;
-              justify-content: center;
-              flex-direction: column;
-              padding: 13px;
-              color: $Color4;
-            }
-
-            input, textarea{
-              border-radius: 1px;
-              margin-bottom: 4px;
-              // box-shadow: 14px 7px 5px 0px rgba(0, 0, 0, 0.75);
-              width: 41vh;
-              background: $Color1;
-              border: solid 1px $Color1;
-              // outline: none;
-              // border: none;
-              color:$Color4;
-              font-size: 0.8em;
-              resize: none;
-              &:hover{
-                transition: 0.3s;
-              color: $Color3;
-              border:solid 1px $Color3;
-              }
-              // &:active{
-              //   transition: 0.3s;
-              // color: $Color3;
-              // border:solid 1px $Color3;
-              // }
-        
-            }
-
-            button {
-              background: $Color1;
-              color:$Color4;
-              width: 50px;
-              border:solid 1px $Color4;
-              border-radius: 2px;
-              // // box-shadow: 14px 7px 5px 0px rgba(0, 0, 0, 0.75);
-              &:hover{
-                transition: 0.3s;
-              color: $Color3;
-              border:solid 1px $Color3;
-              }
-            }
-          }
         }
+        
       }
     }
   }
 }
+@media (max-width: 1250px) {
+  .box {
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+  }
+}
+
+
 
