@@ -9,7 +9,7 @@ import {Router} from '@angular/router'
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-  private busqueda: string;
+  public busqueda: string;
   constructor(
     private seriesService: SeriesService,
     private router: Router,
@@ -25,6 +25,7 @@ export class SearchComponent implements OnInit {
       this.seriesService.searchResults=res;
       this.router.navigate(['/results'])
     })
+    return true;
     // this.userService.register(this.form.value).subscribe(res=>console.log(res))
   }
 }

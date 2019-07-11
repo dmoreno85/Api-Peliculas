@@ -15,7 +15,7 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
   private genreSelected: number = 0;
   private orderBy: string;
   private resultType: any;
-  private peliculas: Object[]
+  public peliculas: Object[]
   private page: number = 1;
   private totalPages: number;
   private languaje: string = "en-US";

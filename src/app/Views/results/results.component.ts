@@ -8,7 +8,7 @@ import {Router} from '@angular/router'
   styleUrls: ['./results.component.scss']
 })
 export class ResultsComponent implements OnInit {
-  private resultadoBusqueda: any;
+  public resultadoBusqueda: any;
   private page: any = 1;
   private totalPages: any;
   private searchInput: string;

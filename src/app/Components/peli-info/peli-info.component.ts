@@ -12,7 +12,7 @@ import { DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
   styleUrls: ['./peli-info.component.scss']
 })
 export class PeliInfoComponent implements OnInit {
-  private peliInfo: any;
+  public peliInfo: any;
   private palette: Palette;
   private transparencia: string = "d4"
   private id: string;

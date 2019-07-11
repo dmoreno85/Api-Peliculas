@@ -7,7 +7,7 @@ import { PeliculasService } from '../../peliculas.service';
   styleUrls: ['./content-principal.component.scss']
 })
 export class ContentPrincipalComponent implements OnInit {
-  private peliculas:Object[]
+  public peliculas:Object[]
   constructor(private peliculasService: PeliculasService) { }//aquí inyecto el servicio PeliculasService al componente upcoming-movies)
   loaded:boolean=false
   ngOnInit() {

@@ -16,7 +16,7 @@ export class SeriesResultsComponent implements OnInit, DoCheck {
   private genreSelected: number = 0;
   private orderBy: string;
   private resultType: any;
-  private series: Object[];
+  public series: Object[];
   private page: number = 1;
   private totalPages: number;
   private languaje: string = "en-US";

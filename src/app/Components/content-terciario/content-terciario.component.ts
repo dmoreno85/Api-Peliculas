@@ -6,7 +6,7 @@ import { SeriesService } from '../../series.service';
   styleUrls: ['./content-terciario.component.scss']
 })
 export class ContentTerciarioComponent implements OnInit {
-  private serieInfo: object[];
+  public serieInfo: object[];
   year: number;
 
   //this.seriesService.getSeriesByYear(year).subscribe(res => this.serieInfo = res.results.splice(0, 5), error => console.log(error))
