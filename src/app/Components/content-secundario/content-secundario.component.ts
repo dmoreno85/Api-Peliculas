@@ -11,6 +11,8 @@ export class ContentSecundarioComponent implements OnInit {
   private peliculas:object[];
   private id: string;
   year:number;
+  desde: number;
+  hasta: number;
     constructor(
       private peliculasService: PeliculasService
              ) { }//aquí inyecto el servicio PeliculasService al componente upcoming-movies)
@@ -19,13 +21,12 @@ ngDoCheck(){
   ngOnInit() {
     }
   filtrarPorMejores(year:number):void{
-    this.peliculasService.getPeliculasByYear(year).subscribe(res => this.peliculas=res.results.splice(0,6), error=>console.log(error))
+    this.peliculasService.getPeliculasByYear(year).subscribe(res => this.peliculas=res.results.splice(200,6), error=>console.log(error))
   }
   
 
   filtrarPorMejoresIntervalo(desde:number,hasta:number):void{
-    console.log(this.year)
-    this.peliculasService.getPeliculasByYearI(this.year,this.year).subscribe(res => this.peliculas=res.results.splice(0,5), error=>console.log(error))
+     this.peliculasService.getPeliculasByYearI(desde,hasta).subscribe(res => this.peliculas=res.results.splice(10,6), error=>console.log(error))
   }
   
   

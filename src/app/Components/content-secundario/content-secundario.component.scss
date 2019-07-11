@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 
+$Color1: #323643;
+$Color2: #606470;
+$Color3: #f1c40f;
+$Color4: #eeeeee;
 
-div .top{
+div.top{
+    display: flex;
+    justify-content: center;
+    flex-flow: initial;
+    align-content: center;
+    background-color: transparent;
+    flex-wrap: wrap;
     
-        margin: 50px 141px;
-        align-content: center;
-        box-shadow: 0 0 20px 5px black;
-        background-color: transparent;
-        width: 92%;
-         
-    }
+}
 
 
  h2 {
@@ -21,20 +26,17 @@ div .top{
 
 
 .Component{
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-    margin: 2.5em;
-    width: 92%;
+    align-self: center;
+    justify-content: center;
 }
 
 .ficha {
     border-left: 0.5em dashed;
     border-inline-end-style: 0.5em dotted black;
     border-right: 0.5em dashed;
-    width: 18em ;
-    height: 95%;
+    width: 17em;
     box-shadow: goldenrod;
     padding: 2.5em;
     margin:1em;
@@ -42,8 +44,8 @@ div .top{
     align-items: center;
 }
 ul{
-    margin-top: 2em;
-    width: 49%;
+    all:unset;
+    margin-left: 10em;
     li{
         all: unset;
         padding: 1em;
@@ -52,9 +54,8 @@ ul{
         border: 1px #6c757d solid;
         box-shadow: 10px 10px 5px 0px rgba(138, 146, 28, 0.75);
         border-radius: 3px 3px 3px 3px;
-        position: relative;
-        left: 8em;
-              &:hover {
+        align-self: center;
+               &:hover {
                transition: all 0.5s ease;
                color: #fff;
                background-color: #6c757d;
