@@ -4,7 +4,7 @@
 
 <div class="serieInfo" *ngIf="serieInfo">
 
-  <div class="backBox" *ngIf="url && palette" [ngStyle]="styleContainer()">
+  <div class="backBox" *ngIf="palette" [ngStyle]="styleContainer()">
     <div class="box">
       <div class="posterSerie">
         <img src="https://image.tmdb.org/t/p/w500/{{serieInfo?.poster_path}}" alt="{{serieInfo?.name}}"
@@ -23,7 +23,7 @@
             <h3>{{credit.name}}</h3>
           </div>
         </div>
-        <div class="trailerSerie">
+        <div class="trailerSerie" *ngIf="url">
           <button (click)="trailerSerie.style.display='block'">Ver Trailer ►</button>
           <div>
             <iframe #trailerSerie  width="560" height="315" [src]="url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
