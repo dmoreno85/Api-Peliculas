@@ -5,22 +5,26 @@
   <div class="backBox" *ngIf="url && palette" [ngStyle]="styleContainer()">
     <div class="box">
       <div class="posterPeli">
-          <img src="https://image.tmdb.org/t/p/w500/{{peliInfo?.poster_path}}" alt="{{peliInfo?.title}}" title="{{peliInfo?.title}}"/>
+        <img src="https://image.tmdb.org/t/p/w500/{{peliInfo?.poster_path}}" alt="{{peliInfo?.title}}" title="{{peliInfo?.title}}"/>
       </div>
       <div class="infoPeli">
         <div class="title">
-              <h2>{{peliInfo?.title}}</h2>
+          <h2>{{peliInfo?.title}}</h2>
         </div>
         <div class="resumenPeli">
           <h3>{{peliInfo?.overview}}</h3>
         </div>
-        <h3>Credits</h3>
-        <div *ngFor="let credit of peliInfo.credits">
-          <h4>{{credit.name}}</h4>
+        <h2>Credits</h2>
+        <div class="credits">
+          <div *ngFor="let credit of peliInfo.credits">
+            <h3>{{credit.name}} </h3>
+          </div>
         </div>
         <div class="trailerPeli">
-          <button (click)="trailerPeli.style.display='block'">Ver Trailer</button>
-          <iframe #trailerPeli width="560" height="315" [src]="url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <button (click)="trailerPeli.style.display='block'">Ver Trailer ►</button>
+          <div>
+            <iframe #trailerPeli width="560" height="315" [src]="url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
         <app-formulario></app-formulario>
       </div>
