@@ -51,8 +51,8 @@ export class PeliculasService {//generamos el servicio con ng g service [nombre 
     return this.http.get(`https://api.themoviedb.org/3/discover/movie?api_key=57100bbbe8d760beada498e98fb84066&primary_release_date.gte=${desde}-01-01&primary_release_date.lte=${hasta}-12-31`);
 
   }
-  getPeliByGenre (desde:number,hasta:number):Observable<any>{
-    return this.http.get(`https://api.themoviedb.org/3/discover/movie?api_key=57100bbbe8d760beada498e98fb84066&primary_release_date.gte=${desde}-01-01&primary_release_date.lte=${hasta}-12-31`);
+  getPeliByGenre (genre:number,page:number):Observable<any>{
+    return this.http.get(`https://api.themoviedb.org/3/discover/movie?api_key=57100bbbe8d760beada498e98fb84066&with_genres=${genre}&page=${page}`);
 
   }
 
