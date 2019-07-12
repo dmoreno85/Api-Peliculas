@@ -95,6 +95,7 @@ export class FilmsResultsComponent implements OnInit, DoCheck {
       }, error => console.log('No se han podido recuperar los datos'))
     } else {
       this.peliculasService.getPeliByGenre(this.genreSelected, page).subscribe(value => {
+        console.log(value.results)
         this.peliculas = value.results;
         this.totalPages = value.total_pages;
       }, error => console.log(error));
